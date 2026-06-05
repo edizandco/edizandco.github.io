@@ -69,7 +69,9 @@
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
       display: flex; align-items: center; justify-content: space-between;
       padding: 1.4rem 4vw;
-      background: var(--dark);
+      background: rgba(13, 12, 10, 0.85); /* Glassmorphism background */
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--rule-d);
     }
     .nav-logo { text-decoration: none; flex-shrink: 0; }
@@ -142,8 +144,9 @@
       font-size: 0.65em;
       font-weight: 600;
       color: var(--on-dark-m);
-      letter-spacing: -0.025em;
+      letter-spacing: -0.015em; /* Slightly tighter for impact */
       margin-top: 0.2em;
+      opacity: 0.9;
     }
 
     .hero-foot {
@@ -380,6 +383,9 @@
     .pc.hot {
       background: var(--ink); color: var(--on-dark);
       border-color: var(--ink);
+      transform: scale(1.02);
+      box-shadow: 0 24px 48px rgba(13, 12, 10, 0.15);
+      z-index: 10;
     }
     .pc.hot:hover { background: #1a1815; }
     .pc-badge {
@@ -501,8 +507,11 @@
       font-weight: 900;
       line-height: 0.82;
       letter-spacing: -0.05em;
-      color: var(--ink);
       display: inline-block; position: relative;
+      background: linear-gradient(180deg, var(--ink) 0%, rgba(13,12,10,0.7) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: var(--ink); /* Fallback */
     }
     .g-num sup {
       font-size: 0.1em; font-weight: 500;
