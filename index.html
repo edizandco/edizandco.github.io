@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ediz & Co. — Yapay Zeka Emlak Altyapısı</title>
-  <meta name="description" content="Emlak ofisleri için yapay zeka altyapısı. Rakibiniz cevap verirken siz uyumasın. 7/24 mesajlaşma, otomatik ilan ve yönetici raporları." />
+  <meta name="description" content="Emlak ofisleri için yapay zeka altyapısı. 7/24 otonom filtreleme, hazır alıcı alarmları ve saniyeler içinde ilan üretimi. Rakibiniz sizi geçmeden siz onu geçin." />
   <meta property="og:title" content="Ediz & Co. — Yapay Zeka Emlak Altyapısı" />
   <meta property="og:description" content="Kullanması zor yeni bir yazılım değil. Kaçan müşterileri yakalayan, danışmanlara zaman kazandıran sistem." />
   <meta property="og:url" content="https://edizandco.com" />
@@ -69,7 +69,9 @@
       position: fixed; top: 0; left: 0; right: 0; z-index: 100;
       display: flex; align-items: center; justify-content: space-between;
       padding: 1.4rem 4vw;
-      background: var(--dark);
+      background: rgba(13, 12, 10, 0.85); /* Glassmorphism background */
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--rule-d);
     }
     .nav-logo { text-decoration: none; flex-shrink: 0; }
@@ -142,8 +144,9 @@
       font-size: 0.65em;
       font-weight: 600;
       color: var(--on-dark-m);
-      letter-spacing: -0.025em;
+      letter-spacing: -0.015em; /* Slightly tighter for impact */
       margin-top: 0.2em;
+      opacity: 0.9;
     }
 
     .hero-foot {
@@ -274,7 +277,7 @@
     /* ─────────────────────────────────────
        OUTCOMES — dark, tabular
     ───────────────────────────────────── */
-    #sonuclar {
+    #sistem {
       padding: 9rem 4vw;
       background: var(--dark);
       color: var(--on-dark);
@@ -365,7 +368,7 @@
 
     .pricing-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       border: 1px solid var(--rule);
       background: var(--bg-off);
     }
@@ -380,6 +383,9 @@
     .pc.hot {
       background: var(--ink); color: var(--on-dark);
       border-color: var(--ink);
+      transform: scale(1.02);
+      box-shadow: 0 24px 48px rgba(13, 12, 10, 0.15);
+      z-index: 10;
     }
     .pc.hot:hover { background: #1a1815; }
     .pc-badge {
@@ -501,8 +507,11 @@
       font-weight: 900;
       line-height: 0.82;
       letter-spacing: -0.05em;
-      color: var(--ink);
       display: inline-block; position: relative;
+      background: linear-gradient(180deg, var(--ink) 0%, rgba(13,12,10,0.7) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      color: var(--ink); /* Fallback */
     }
     .g-num sup {
       font-size: 0.1em; font-weight: 500;
@@ -702,31 +711,34 @@
     </svg>
   </a>
   <ul class="nav-mid">
-    <li><a href="#hizmet">Hizmet</a></li>
-    <li><a href="#surec">Süreç</a></li>
+    <li><a href="#nasil">Metodoloji</a></li>
+    <li><a href="#paketler">Kapsam</a></li>
+    <li><a href="#sistem">Sonuçlar</a></li>
+    <li><a href="#paketler">Fiyatlandırma</a></li>
   </ul>
-  <a class="nav-cta" href="#iletisim">Örnek İste</a>
+  <a class="nav-cta" href="https://calendar.app.google/DopseFW46WqVGAgE7" target="_blank" rel="noopener">Ön Görüşme</a>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
   <div class="hero-body">
-    <div class="hero-eyebrow">Müşteri Canlandırma Operasyonu &nbsp;·&nbsp; Türkiye Geneli</div>
-    <h1 class="hero-h">
-      Masada unuttuğunuz<br>
-      parayı hızlıca<br>
-      <em>topluyoruz.</em>
-      <span class="hero-second">Eski Müşterilerinizi 3 Günde Sıcak Fırsata Çevirin</span>
+    <div class="hero-eyebrow">Global Data Operations &nbsp;·&nbsp; Türkiye & MENA</div>
+    <h1 class="hero-h" style="font-size: clamp(3.5rem, 9vw, 9.5rem);">
+      Atıl veri,<br>
+      kayıp<br>
+      <em>sermayedir.</em>
+      <span class="hero-second">Emlak Brokerları İçin Otonom Veri İşleme ve Fırsat Kurtarma</span>
     </h1>
   </div>
   <div class="hero-foot">
-    <p class="hero-desc">
-      Yeni bir yazılım veya araç satmıyoruz. Kenarda bekleyen, aranmamış, ulaşılamamış veya soğumuş eski müşteri veri tabanınızı alıp, ekibiniz için "kim aranacak, ne söylenecek" detaylarını içeren hazır bir fırsat listesine (operasyon dosyasına) dönüştürüyoruz.
+    <p class="hero-desc" style="max-width: 550px; font-size: 1.05rem;">
+      <strong style="color:var(--on-dark); display:block; margin-bottom:0.4rem; font-size: 1.15rem; font-weight: 500;">Masada Kalan Parayı Toplayın</strong>
+      Mevcut CRM'inizde veya Excel tablolarınızda bekleyen eski, soğumuş ve ulaşılamamış müşteri verilerinizi analiz ediyoruz. Doğru temas noktalarını belirleyip, ekibiniz için doğrudan aksiyona ve satışa dönüşecek net operasyon dosyaları inşa ediyoruz.
     </p>
     <div class="hero-acts">
       <a class="btn btn-solid" href="https://www.shopier.com/edizandco/48404029" target="_blank" rel="noopener">Operasyonu Başlat (Shopier)</a>
-      <a class="btn btn-accent" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2cw09XGYEYPh2KeOf4pXnBxKDF1ELmzATsKNTWsx8K86BR4ZiIsubvd2LHCbjZ8Py4CLszWQJw" target="_blank" rel="noopener">Ön Görüşme Ayarla</a>
-      <a class="btn btn-ghost-d" href="#hizmet">Detayları Gör</a>
+      <a class="btn btn-accent" href="https://calendar.app.google/DopseFW46WqVGAgE7" target="_blank" rel="noopener">Ön Görüşme Ayarla</a>
+      <a class="btn btn-ghost-d" href="#paketler">Fiyatlandırma</a>
     </div>
   </div>
 </section>
@@ -734,14 +746,14 @@
 <!-- TICKER -->
 <div class="ticker">
   <div class="ticker-track">
-    <span>Müşteri Canlandırma Operasyonu</span><span class="dot">&nbsp;·&nbsp;</span>
-    <span>72 Saat Garanti</span><span class="dot">&nbsp;·&nbsp;</span>
-    <span>Evrensel Operasyon Dosyası</span><span class="dot">&nbsp;·&nbsp;</span>
-    <span>Aksiyona Hazır Liste</span><span class="dot">&nbsp;·&nbsp;</span>
-    <span>Müşteri Canlandırma Operasyonu</span><span class="dot">&nbsp;·&nbsp;</span>
-    <span>72 Saat Garanti</span><span class="dot">&nbsp;·&nbsp;</span>
-    <span>Evrensel Operasyon Dosyası</span><span class="dot">&nbsp;·&nbsp;</span>
-    <span>Aksiyona Hazır Liste</span><span class="dot">&nbsp;·&nbsp;</span>
+    <span>Veri Çözümleme</span><span class="dot">&nbsp;·&nbsp;</span>
+    <span>Gelir Kurtarma</span><span class="dot">&nbsp;·&nbsp;</span>
+    <span>Otonom İşleme</span><span class="dot">&nbsp;·&nbsp;</span>
+    <span>Stratejik Temas</span><span class="dot">&nbsp;·&nbsp;</span>
+    <span>Veri Çözümleme</span><span class="dot">&nbsp;·&nbsp;</span>
+    <span>Gelir Kurtarma</span><span class="dot">&nbsp;·&nbsp;</span>
+    <span>Otonom İşleme</span><span class="dot">&nbsp;·&nbsp;</span>
+    <span>Stratejik Temas</span><span class="dot">&nbsp;·&nbsp;</span>
   </div>
 </div>
 
@@ -749,89 +761,89 @@
 <section class="statement reveal">
   <div class="s-left">
     <div class="s-big-num">80<span class="s-big-unit">%</span></div>
-    <p class="s-big-label">Emlak ofislerinin sahip olduğu verinin çok büyük kısmı "soğuk liste" olarak atıl durumda kalır ve paraya dönüşmez.</p>
+    <p class="s-big-label">Emlak ofislerinin sahip olduğu verinin %80'i işlenmez ve zamanla değerini yitirir.</p>
     <div class="s-mini-stats">
       <div class="s-mini">
-        <div class="s-mini-v">72<em> sa.</em></div>
-        <div class="s-mini-l">Teslimat Süresi</div>
+        <div class="s-mini-v">3<em> Gün</em></div>
+        <div class="s-mini-l">Operasyon Süresi</div>
       </div>
       <div class="s-mini">
-        <div class="s-mini-v">500<em>+</em></div>
-        <div class="s-mini-l">İşlenen Kayıt</div>
+        <div class="s-mini-v">0<em> Efor</em></div>
+        <div class="s-mini-l">Kurulum Gereksinimi</div>
       </div>
     </div>
   </div>
   <div class="s-right">
     <div class="s-label">Durum Özeti</div>
     <div class="s-quote">
-      Çekmecede bekleyen veya CRM'de unutulan eski müşteri veriniz aslında saf altın. <em>Sadece nasıl canlandıracağınızı bilmiyorsunuz.</em>
+      Elinizdeki en değerli varlık, geçmişte temas kurduğunuz ancak satışı kapatamadığınız eski müşteri listelerinizdir. <em>Veri, kendi kendine değere dönüşmez.</em>
     </div>
-    <p class="s-body">Biz ofisinize özel bir canlandırma operasyonu yürütüyoruz. Yüzlerce eski kaydı analiz ediyor, hangisinin şu an alıcı/satıcı potansiyeli taşıdığını tespit edip size aksiyona hazır bir fırsat listesi sunuyoruz.</p>
+    <p class="s-body">Biz bu listeleri özel yapay zeka altyapımızla yeniden tarar ve skorlarız. Hangi müşterinin şu an piyasada aktif potansiyel taşıdığını saptar, ekibinizin zaman kaybetmeden doğru kişiyi, doğru teklifle aramasını sağlarız.</p>
   </div>
 </section>
 
 <!-- OUTCOMES -->
-<section id="sonuclar" class="reveal">
+<section id="sistem" class="reveal">
   <div class="sec-head-dark">
     <div>
       <div class="sec-label-sm">4 Net Çıktı</div>
-      <h2 class="sec-h-dark">Yatırımınızın<br><em>karşılığını alın.</em></h2>
+      <h2 class="sec-h-dark">Yazılım Değil,<br><em>Kapanış Makinesi.</em></h2>
     </div>
   </div>
   <div class="oc-table">
     <div class="oc-row">
       <span class="oc-n">01</span>
       <div>
-        <span class="oc-tag">Derin Analiz</span>
-        <div class="oc-title">Veri Çözümlemesi</div>
+        <span class="oc-tag">Zaman Kurtarıcı</span>
+        <div class="oc-title">Ölü Müşterileri Çöpe Atar</div>
       </div>
-      <p class="oc-desc">Yüzlerce kaydın neden durduğunu tespit ederiz. Kim alıcı, kim satıcı adayı, kimin neye ihtiyacı var; tek tek ortaya çıkarırız.</p>
+      <p class="oc-desc">Boş muhabbet eden turistlerle vakit kaybetmeyin. Asistanımız müşterinin bütçesini ve ciddiyetini filtreler, sadece cebinde parası olanları masaya oturtur.</p>
     </div>
     <div class="oc-row">
       <span class="oc-n">02</span>
       <div>
-        <span class="oc-tag">Önceliklendirme</span>
-        <div class="oc-title">En Sıcak Fırsatlar</div>
+        <span class="oc-tag">Hız Eşittir Para</span>
+        <div class="oc-title">Anında "Hazır Alıcı" Alarmı</div>
       </div>
-      <p class="oc-desc">Tüm liste içinden hangi müşterinin hemen aranması gerektiğini puanlar ve zaman kaybını önleyecek öncelikli listeyi oluştururuz.</p>
+      <p class="oc-desc">Sıcak müşteri yakalandığı saniye, şahsi WhatsApp'ınıza anlık istihbarat raporu düşer. Satışı rakiplerinizden önce kapatırsınız.</p>
     </div>
     <div class="oc-row">
       <span class="oc-n">03</span>
       <div>
-        <span class="oc-tag">Operasyon Dosyası</span>
-        <div class="oc-title">Satış Senaryoları (Playbook)</div>
+        <span class="oc-tag">Görünürlük = Hacim</span>
+        <div class="oc-title">Saniyeler İçinde İlan Makinesi</div>
       </div>
-      <p class="oc-desc">Ekibinize kiminle ne konuşacağını kelimesi kelimesine veren mesaj şablonları ve telefon senaryolarını teslim ederiz.</p>
+      <p class="oc-desc">Saatlerinizi ilan metni yazarak harcamayın. Evin 3 özelliğini yazın; Sahibinden, Instagram ve Yatırımcı Ağınız için 3 farklı satıcı kopyasını anında üretsin.</p>
     </div>
     <div class="oc-row">
       <span class="oc-n">04</span>
       <div>
-        <span class="oc-tag">Hızlı Nakit Dönüşü</span>
-        <div class="oc-title">Atıl Veriden Satışa</div>
+        <span class="oc-tag">Sıfır Efor</span>
+        <div class="oc-title">Tuş Yok, Şifre Yok</div>
       </div>
-      <p class="oc-desc">Ekibiniz yeni lead aramakla vakit kaybetmek yerine, zaten elinizde olan sıcak fırsatlara ulaşıp haftalar içinde kapanış yapar.</p>
+      <p class="oc-desc">Size yeni bir uygulama satmıyoruz. Biz arka planda her şeyi kuruyoruz. Siz sadece telefonunuza düşen hazır alıcılarla ilgileniyorsunuz.</p>
     </div>
   </div>
 </section>
 
 <!-- PRICING -->
-<section id="hizmet" class="reveal" style="padding: 9rem 4vw; background: var(--dark); color: var(--on-dark);">
+<section id="paketler" class="reveal" style="padding: 9rem 4vw; background: var(--dark); color: var(--on-dark);">
   <div class="sec-head-dark">
     <div>
-      <div class="sec-label-sm" style="color: var(--accent);">Tek Hizmet. Net Sonuç.</div>
-      <h2 class="sec-h-dark">Müşteri Canlandırma<br><em>Operasyonu</em></h2>
+      <div class="sec-label-sm" style="color: var(--accent);">Data Monetization</div>
+      <h2 class="sec-h-dark">Tek Operasyon.<br><em>Maksimum Dönüşüm.</em></h2>
     </div>
     <div class="sec-sub-dark">
-      Eski listenizi canlandırıyor, size<br>
-      <strong>masada kalan parayı getiriyoruz.</strong>
+      Eski listelerinizi işliyor, ekibinize<br>
+      <strong>hazır aksiyon planları sunuyoruz.</strong>
     </div>
   </div>
   
   <div style="margin-top: 4rem; border: 1px solid var(--rule-d); background: var(--ink); padding: 4rem; display: flex; flex-direction: column; gap: 2rem; position: relative;">
-    <div style="font-size: 0.65rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent);">Tüm Süreç Dahil</div>
+    <div style="font-size: 0.65rem; font-weight: 700; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent);">Kapsam & Fiyatlandırma</div>
     <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 2rem;">
       <div>
-        <h3 style="font-size: 2.5rem; font-weight: 800; letter-spacing: -0.025em; margin-bottom: 0.5rem; color: var(--on-dark);">Komple Canlandırma</h3>
+        <h3 style="font-size: 2.5rem; font-weight: 800; letter-spacing: -0.025em; margin-bottom: 0.5rem; color: var(--on-dark);">Veri Kurtarma Operasyonu</h3>
         <p style="font-size: 0.9rem; color: var(--on-dark-m);">500 kayda kadar tam veri analizi ve aksiyon listesi.</p>
       </div>
       <div style="display: flex; align-items: baseline; gap: 0.3rem;">
@@ -842,15 +854,15 @@
     <div style="height: 1px; background: var(--rule-d); margin: 1rem 0;"></div>
     
     <ul style="list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
-      <li style="display: flex; gap: 0.8rem; align-items: flex-start; font-size: 0.9rem; color: var(--on-dark-m);"><span style="color: var(--accent); font-weight: 700;">—</span> 500 Kayda Kadar Kapsam</li>
-      <li style="display: flex; gap: 0.8rem; align-items: flex-start; font-size: 0.9rem; color: var(--on-dark-m);"><span style="color: var(--accent); font-weight: 700;">—</span> 3 İş Günü Teslimat</li>
-      <li style="display: flex; gap: 0.8rem; align-items: flex-start; font-size: 0.9rem; color: var(--on-dark-m);"><span style="color: var(--accent); font-weight: 700;">—</span> 1 Tur İnce Ayar Garantisi</li>
-      <li style="display: flex; gap: 0.8rem; align-items: flex-start; font-size: 0.9rem; color: var(--on-dark-m);"><span style="color: var(--accent); font-weight: 700;">—</span> Evrensel Operasyon Dosyası</li>
+      <li style="display: flex; gap: 0.8rem; align-items: flex-start; font-size: 0.9rem; color: var(--on-dark-m);"><span style="color: var(--accent); font-weight: 700;">—</span> 500 Kayıt İşleme Kapasitesi</li>
+      <li style="display: flex; gap: 0.8rem; align-items: flex-start; font-size: 0.9rem; color: var(--on-dark-m);"><span style="color: var(--accent); font-weight: 700;">—</span> 3 İş Günü Analiz Süresi</li>
+      <li style="display: flex; gap: 0.8rem; align-items: flex-start; font-size: 0.9rem; color: var(--on-dark-m);"><span style="color: var(--accent); font-weight: 700;">—</span> Detaylı Lead Scoring Raporu</li>
+      <li style="display: flex; gap: 0.8rem; align-items: flex-start; font-size: 0.9rem; color: var(--on-dark-m);"><span style="color: var(--accent); font-weight: 700;">—</span> Segment Bazlı Temas Playbook'u</li>
     </ul>
     
     <div style="display: flex; gap: 1rem; margin-top: 2.5rem; flex-wrap: wrap;">
       <a class="btn btn-accent" href="https://www.shopier.com/edizandco/48404029" target="_blank" rel="noopener" style="flex: 1; text-align: center; justify-content: center;">Operasyonu Başlat (Shopier)</a>
-      <a class="btn btn-ghost-d" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2cw09XGYEYPh2KeOf4pXnBxKDF1ELmzATsKNTWsx8K86BR4ZiIsubvd2LHCbjZ8Py4CLszWQJw" target="_blank" rel="noopener" style="flex: 1; text-align: center; justify-content: center;">Ön Görüşme Ayarla</a>
+      <a class="btn btn-ghost-d" href="https://calendar.app.google/DopseFW46WqVGAgE7" target="_blank" rel="noopener" style="flex: 1; text-align: center; justify-content: center;">Ön Görüşme Ayarla</a>
     </div>
   </div>
 </section>
@@ -859,37 +871,55 @@
 
 <!-- GUARANTEE -->
 <section class="guarantee reveal">
-  <div class="g-num">72<sup>Saat</sup></div>
-  <h3 class="g-h">Gecikirse<br><em>iade ederiz.</em></h3>
-  <p class="g-desc">Operasyon dosyası 72 saati geçerse veya sunduğumuz playbook'u uygulayıp sonuç alamazsanız şartsız iade sağlıyoruz.</p>
-  <p class="g-fine">Aksiyona hazır listenin size teslim edilme hızı garanti altındadır. (500 kayıt limitli.)</p>
+  <div class="g-num">Risk<sup>Free</sup></div>
+  <h3 class="g-h">Sıfır Risk:<br><em>Garanti.</em></h3>
+  <p class="g-desc">İlk analiz sonucunda verilerinizin operasyona uygun (kurtarılabilir) olmadığına kanaat getirirsek, işleme başlamadan tam iade sağlıyoruz.</p>
+  <p class="g-fine">Boş yere operasyon yapıp para almayız. Risk daima bizim tarafımızdadır.</p>
 </section>
 
 <!-- PROCESS -->
-<section id="surec" class="reveal">
+<section id="nasil" class="reveal">
   <div class="sec-head-light" style="margin-bottom:0">
     <div>
-      <div class="sec-label-sm">Süreç</div>
-      <h2 class="sec-h-light">3 Günde <em>Nasıl Çalışır?</em></h2>
+      <div class="sec-label-sm">Metodoloji</div>
+      <h2 class="sec-h-light">Süreç <em>Nasıl İşler?</em></h2>
     </div>
-    <p class="sec-sub-light">Eski listelerinizi anında sıcak fırsatlara dönüştüren net ve şeffaf operasyon.</p>
+    <p class="sec-sub-light">Güvenli, şeffaf ve doğrudan nakit akışı odaklı operasyon adımları.</p>
   </div>
 
   <div class="p-steps">
     <div class="p-step">
       <span class="p-num">01</span>
       <div class="p-title">Veri Kabulü</div>
-      <p class="p-desc">Kenarda bekleyen, aranmamış, ulaşılamamış veya soğumuş 500'e kadar eski müşteri kaydınızı bize teslim edersiniz.</p>
+      <p class="p-desc">Gizlilik protokolleri çerçevesinde atıl verilerinizi (max 500 kayıt) güvenli şekilde teslim alırız.</p>
     </div>
     <div class="p-step">
       <span class="p-num">02</span>
-      <div class="p-title">Derinlemesine Analiz</div>
-      <p class="p-desc">Yapay zeka ve operasyon tecrübemizle veriyi tarar; her bir kaydın kim olduğunu, neden durduğunu ve nasıl yeniden tetiklenebileceğini saptarız.</p>
+      <div class="p-title">Yapay Zeka Analizi</div>
+      <p class="p-desc">Veri setinizi işler, profillerin geçmiş satın alma kalıplarını ve mevcut durumlarını tespit ederiz.</p>
     </div>
     <div class="p-step">
       <span class="p-num">03</span>
-      <div class="p-title">Teslimat & Aksiyon</div>
-      <p class="p-desc">72 saat içinde; ekibinize kimi arayacağını, kime WhatsApp'tan yazacağını ve temas sırasında tam olarak hangi notu/teklifi kullanacağını gösteren operasyon dosyanızı teslim ederiz.</p>
+      <div class="p-title">Strateji ve Senaryo</div>
+      <p class="p-desc">Farklı segmentler için dönüşüm oranı yüksek arama ve mesaj taslakları (playbook) kurgularız.</p>
+    </div>
+    <div class="p-step">
+      <span class="p-num">04</span>
+      <div class="p-title">Nihai Teslimat</div>
+      <p class="p-desc">Ekibinizin doğrudan sahada kullanabileceği aksiyon listesini 3 iş günü içinde tarafınıza sunarız.</p>
+    </div>
+  </div>
+
+  <div class="p-aside-block">
+    <div class="p-aside-item">
+      <div class="p-aside-label">Güvenlik (KVKK)</div>
+      <div class="p-aside-h">Veriniz Güvendedir.</div>
+      <p class="p-aside-p">Verileriniz süreç bitiminde sistemlerimizden tamamen silinir. Sadece işleme amaçlı analiz edilir.</p>
+    </div>
+    <div class="p-aside-item">
+      <div class="p-aside-label">Uyumluluk</div>
+      <div class="p-aside-h">Operasyonel Geçiş.</div>
+      <p class="p-aside-p">Teslim edilen çıktılar her türlü CRM yapısına uygundur ve mevcut iş akışınızı bozmaz.</p>
     </div>
   </div>
 </section>
@@ -897,12 +927,12 @@
 <!-- NUMBERS -->
 <div class="numbers reveal">
   <div class="num">
-    <div class="num-v">72<em> Saat</em></div>
+    <div class="num-v">3<em> Gün</em></div>
     <p class="num-l">Maksimum Teslimat</p>
   </div>
   <div class="num">
-    <div class="num-v">500<em>+</em></div>
-    <p class="num-l">Kapasite / Data</p>
+    <div class="num-v">100<em>%</em></div>
+    <p class="num-l">Şeffaf Süreç</p>
   </div>
   <div class="num">
     <div class="num-v">0<em>₺</em></div>
@@ -912,15 +942,13 @@
 
 <!-- CTA -->
 <section id="iletisim">
-  <div class="cta-eyebrow">Hemen Deneyin</div>
-  <h2 class="cta-h">
-    Masadaki<br>
-    <em>Parayı Alın.</em>
-  </h2>
-  <p class="cta-sub">Sistemin gücünü görmek için elinizdeki en zorlu veya en eski veriyle bize ulaşın.</p>
+  <div class="cta-eyebrow">Aksiyona Geç</div>
+  <h2 class="cta-h">Operasyonu<br><em>Başlatın.</em></h2>
+  <p class="cta-sub">Masadaki parayı toplamaya hazırsanız, ilk adımı atın. Sistem detaylarını ve iş akışını görüşelim.</p>
   <div class="cta-acts">
     <a class="btn btn-cream" href="https://www.shopier.com/edizandco/48404029" target="_blank" rel="noopener">Operasyonu Başlat (Shopier)</a>
-    <a class="btn btn-accent" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2cw09XGYEYPh2KeOf4pXnBxKDF1ELmzATsKNTWsx8K86BR4ZiIsubvd2LHCbjZ8Py4CLszWQJw" target="_blank" rel="noopener">Ön Görüşme Ayarla</a>
+    <a class="btn btn-accent" href="https://calendar.app.google/DopseFW46WqVGAgE7" target="_blank" rel="noopener">Ön Görüşme Ayarla</a>
+    <a class="btn btn-ghost-cta" href="mailto:edizandcompany@gmail.com">edizandcompany@gmail.com</a>
   </div>
 </section>
 
@@ -930,8 +958,12 @@
     <text x="0" y="17" style="font-family:'Cormorant Garamond',Georgia,serif;font-size:17px;font-weight:700;fill:#F4F0E8;letter-spacing:0.01em">Ediz &amp; Co.</text>
   </svg>
   <ul class="foot-links">
+    <li><a href="#nasil">Metodoloji</a></li>
+    <li><a href="#paketler">Kapsam</a></li>
+    <li><a href="#sistem">Sonuçlar</a></li>
+    <li><a href="#paketler">Fiyatlandırma</a></li>
+    <li><a href="https://calendar.app.google/DopseFW46WqVGAgE7" target="_blank" rel="noopener">Randevu</a></li>
     <li><a href="#iletisim">İletişim</a></li>
-    <li><a href="aydinlatma_metni.md">KVKK Aydınlatma Metni</a></li>
   </ul>
   <p class="foot-r">© 2026 Ediz &amp; Co.</p>
 </footer>
