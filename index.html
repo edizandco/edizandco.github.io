@@ -855,6 +855,48 @@
     .modal-body strong {
       color: var(--ink);
     }
+    
+    /* ─────────────────────────────────────
+       SAMPLE MODAL
+    ───────────────────────────────────── */
+    #sample-modal .modal-content {
+      max-width: 900px;
+    }
+    .sample-img-wrap {
+      width: 100%; border-radius: 8px; overflow: hidden;
+      border: 1px solid var(--rule); margin-bottom: 2rem;
+    }
+    .sample-img-wrap img { width: 100%; display: block; }
+    .sample-actions {
+      display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap;
+    }
+    .sample-actions .btn { flex: 1; text-align: center; }
+
+    /* ─────────────────────────────────────
+       AUTHORITY SECTION
+    ───────────────────────────────────── */
+    .authority {
+      padding: 9rem 4vw; background: var(--dark); color: var(--on-dark);
+      display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
+    }
+    .auth-left .sec-label-sm { color: var(--accent); }
+    .auth-h {
+      font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 900; line-height: 1;
+      letter-spacing: -0.03em; margin-bottom: 2rem;
+    }
+    .auth-h em { color: var(--accent); font-style: normal; }
+    .auth-desc {
+      font-size: 1rem; color: var(--on-dark-m); line-height: 1.7; margin-bottom: 2rem;
+    }
+    .auth-right { padding: 3rem; border: 1px solid var(--rule-d); background: var(--ink); }
+    .auth-stat { margin-bottom: 2rem; }
+    .auth-stat:last-child { margin-bottom: 0; }
+    .auth-stat-v { font-size: 2.5rem; font-weight: 800; color: var(--on-dark); line-height: 1; margin-bottom: 0.5rem; }
+    .auth-stat-l { font-size: 0.75rem; color: var(--on-dark-m); letter-spacing: 0.05em; text-transform: uppercase; }
+    
+    @media (max-width: 900px) {
+      .authority { grid-template-columns: 1fr; gap: 3rem; }
+    }
   </style>
 </head>
 <body>
@@ -868,7 +910,7 @@
     <li><a href="#hizmet">Hizmet</a></li>
     <li><a href="#surec">Süreç</a></li>
   </ul>
-  <a class="nav-cta" href="#iletisim">Örnek İste</a>
+  <a class="nav-cta" href="#" id="sample-link">Örnek İncele</a>
 </nav>
 
 <!-- HERO -->
@@ -973,6 +1015,36 @@
         <div class="oc-title">Atıl Veriden Satışa</div>
       </div>
       <p class="oc-desc">Ekibiniz yeni lead aramakla vakit kaybetmek yerine, zaten elinizde olan sıcak fırsatlara ulaşıp haftalar içinde kapanış yapar.</p>
+    </div>
+  </div>
+</section>
+
+<!-- AUTHORITY -->
+<section id="biz-kimiz" class="authority reveal">
+  <div class="auth-left">
+    <div class="sec-label-sm" style="font-size: 0.63rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; margin-bottom: 1.2rem; display: flex; align-items: center; gap: 0.7rem;">
+      <span style="display:inline-block; width:18px; height:1px; background:var(--accent);"></span>
+      Arkanızdaki Güç: Ediz & Co.
+    </div>
+    <h2 class="auth-h">
+      Emlak satışında<br><em>veri mühendisliği.</em>
+    </h2>
+    <p class="auth-desc">
+      Biz standart bir pazarlama ajansı değiliz. Kurumsal gayrimenkul ofislerinin elinde biriken binlerce "ölü" datayı, yapay zeka destekli analizlerle işliyor ve ekibinize "kim, ne zaman, hangi senaryo ile aranmalı" diyen matematiksel bir operasyon sunuyoruz. Sizin yerinize tahmin yürütmeyi bırakıp, kesin verilere odaklanıyoruz.
+    </p>
+  </div>
+  <div class="auth-right">
+    <div class="auth-stat">
+      <div class="auth-stat-v">AI Destekli</div>
+      <div class="auth-stat-l">Önceliklendirme Algoritması</div>
+    </div>
+    <div class="auth-stat">
+      <div class="auth-stat-v">Tam Uyumlu</div>
+      <div class="auth-stat-l">KVKK & GDPR Standartları</div>
+    </div>
+    <div class="auth-stat">
+      <div class="auth-stat-v">Veriye Dayalı</div>
+      <div class="auth-stat-l">Satış & İtiraz Karşılama Senaryoları</div>
     </div>
   </div>
 </section>
@@ -1162,7 +1234,55 @@
       if (e.key === 'Escape' && kvkkModal.classList.contains('active')) closeModal();
     });
   }
+
+  // Sample Modal Logic
+  const sampleLink = document.getElementById('sample-link');
+  const sampleModal = document.getElementById('sample-modal');
+  const sampleClose = document.getElementById('sample-close');
+
+  if (sampleLink && sampleModal && sampleClose) {
+    sampleLink.addEventListener('click', (e) => {
+      e.preventDefault();
+      sampleModal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+
+    const closeSampleModal = () => {
+      sampleModal.classList.remove('active');
+      document.body.style.overflow = '';
+    };
+
+    sampleClose.addEventListener('click', closeSampleModal);
+    sampleModal.addEventListener('click', (e) => {
+      if (e.target === sampleModal) closeSampleModal();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && sampleModal.classList.contains('active')) closeSampleModal();
+    });
+  }
 </script>
+
+<!-- SAMPLE MODAL -->
+<div class="modal-overlay" id="sample-modal">
+  <div class="modal-content" style="background: var(--dark); color: var(--on-dark); border: 1px solid var(--rule-d);">
+    <button class="modal-close" id="sample-close" style="color: var(--on-dark);">&times;</button>
+    <div class="modal-body">
+      <h2 style="border-bottom-color: var(--rule-d);">Örnek Operasyon Dosyası</h2>
+      <p style="color: var(--on-dark-m);">
+        Müşteri verilerinizi işledikten sonra, ekibinize bu formatta aksiyona hazır bir pano sunuyoruz. Hangi müşterinin "Sıcak Fırsat" (Hot Opportunity) olduğu algoritmamız tarafından belirlenir ve arama yapacak kişi için sağ taraftaki "Playbook & Call Script" (Arama Senaryosu) anında hazırdır.
+      </p>
+      
+      <div class="sample-img-wrap">
+        <img src="playbook.png" alt="Müşteri Canlandırma Panosu Örneği">
+      </div>
+      
+      <div class="sample-actions">
+        <a class="btn btn-accent" href="https://www.shopier.com/edizandco/48435203" target="_blank" rel="noopener">Kendi Verinizle Başlatın</a>
+        <a class="btn btn-ghost-cta" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2cw09XGYEYPh2KeOf4pXnBxKDF1ELmzATsKNTWsx8K86BR4ZiIsubvd2LHCbjZ8Py4CLszWQJw" target="_blank" rel="noopener">Ön Görüşme Ayarla</a>
+      </div>
+    </div>
+  </div>
+</div>
 
 </body>
 </html>
