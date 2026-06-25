@@ -141,11 +141,12 @@
     }
     .hero-second {
       display: block;
-      font-size: 0.65em;
-      font-weight: 600;
+      font-size: clamp(1.1rem, 2.2vw, 1.8rem);
+      font-weight: 500;
+      line-height: 1.5;
       color: var(--on-dark-m);
-      letter-spacing: -0.015em; /* Slightly tighter for impact */
-      margin-top: 0.2em;
+      letter-spacing: -0.01em;
+      margin-top: 1.5rem;
       opacity: 0.9;
     }
 
@@ -206,7 +207,7 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 6rem;
-      align-items: end;
+      align-items: start;
     }
 
     .s-left { }
@@ -759,7 +760,7 @@
 <section class="statement reveal">
   <div class="s-left">
     <div class="s-big-num" style="font-size: clamp(3rem, 10vw, 5rem); margin-bottom: 1rem; color: var(--on-dark); letter-spacing: -0.04em;">Nakit<br><em>Akışı</em></div>
-    <p class="s-big-label">Elinizdeki en değerli ciro fırsatı; pazarlama bütçesi harcanmış, sizinle görüşmüş ancak satış döngüsünde takılı kalmış hazır alıcılardır.</p>
+    <p class="s-big-label">Elinizdeki en değerli ciro kaynağı; pazarlama bütçesi harcanmış, sizinle görüşmüş ancak satış döngüsünde takılı kalmış hazır alıcılardır.</p>
     <div class="s-mini-stats">
       <div class="s-mini">
         <div class="s-mini-v">3<em> Gün</em></div>
@@ -776,7 +777,6 @@
     <div class="s-quote">
       Eski müşteri listeleriniz sadece birer isim ve numaradan ibaret değildir. Doğru analiz ve temas stratejisiyle her biri, ekibiniz için kapatılmaya hazır yüksek değerli satış fırsatlarıdır.
     </div>
-    <p class="s-body">Elinizdeki listelere hazırlıksız yapılan aramalar zaman ve ciro kaybıdır. Biz verilerinizi analiz eder, satın alma iştahına göre önceliklendirir ve ekibinize; kimi, hangi sırayla arayacağını gösteren net ve kapsamlı bir iletişim planı ile her temas öncesi kullanabilecekleri özel müşteri arka plan notlarını sunarız. Böylece her görüşme kârlı bir satış fırsatına dönüşür.</p>
   </div>
 </section>
 
@@ -827,7 +827,6 @@
 <section id="paketler" class="reveal" style="padding: 9rem 4vw; background: var(--dark); color: var(--on-dark);">
   <div class="sec-head-dark">
     <div>
-      <div class="sec-label-sm" style="color: var(--accent);">Operasyon Kapsamı</div>
       <h2 class="sec-h-dark">Şeffaf<br><em>Fiyatlandırma.</em></h2>
     </div>
     <div class="sec-sub-dark">
