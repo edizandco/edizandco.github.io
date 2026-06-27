@@ -19,18 +19,18 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg:       #F8FAFC;
-      --bg-off:   #EEF2F6;
-      --ink:      #0F172A;
-      --ink-2:    #334155;
-      --mute:     #64748B;
+      --bg:       #ffffff;
+      --bg-off:   #f4f4f5;
+      --ink:      #09090b;
+      --ink-2:    #27272a;
+      --mute:     #71717a;
       --accent:   #2563EB;
       --accent-h: #1D4ED8;
-      --dark:     #0B0F19;
-      --on-dark:  #F8FAFC;
-      --on-dark-m: rgba(248,250,252,0.6);
-      --rule:     rgba(15,23,42,0.08);
-      --rule-d:   rgba(248,250,252,0.08);
+      --dark:     #09090b;
+      --on-dark:  #ffffff;
+      --on-dark-m: #a1a1aa;
+      --rule:     #e4e4e7;
+      --rule-d:   #27272a;
     }
 
     html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
@@ -405,10 +405,10 @@
       background: var(--dark);
       color: var(--on-dark);
       border-color: var(--dark);
-      box-shadow: 0 10px 40px rgba(10, 15, 29, 0.15);
+      box-shadow: 0 10px 40px rgba(9, 9, 11, 0.15);
     }
     .pc.hot:hover {
-      background: #0d1428;
+      background: #18181b;
       transform: translateY(-4px);
       box-shadow: 0 20px 50px rgba(10, 15, 29, 0.25);
     }
@@ -568,9 +568,9 @@
     .p-steps { margin-top: 0; }
     .p-step {
       display: grid;
-      grid-template-columns: 72px 1fr 2.2fr;
-      gap: 3rem;
-      padding: 2.8rem 0;
+      grid-template-columns: 56px 1fr;
+      gap: 2rem;
+      padding: 2.2rem 0;
       border-bottom: 1px solid var(--rule);
       align-items: start;
     }
@@ -855,35 +855,39 @@
 
 <!-- NAV -->
 <nav>
-  <a class="nav-logo" href="#">
-    <img class="site-logo" src="logo_new.png" alt="Ediz &amp; Co.">
+  <a class="nav-logo" href="#" style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.4rem; font-weight: 800; color: #ffffff; text-decoration: none; letter-spacing: -0.03em;">
+    Ediz <span style="color: var(--accent);">&amp;</span> Co.
   </a>
   <ul class="nav-mid">
-    <li><a href="#hizmet">Hizmet</a></li>
-    <li><a href="#surec">Süreç</a></li>
+    <li><a href="#surec">Nasıl Çalışır?</a></li>
+    <li><a href="#sonuclar">Çıktılar</a></li>
+    <li><a href="#hizmet">Fiyatlandırma</a></li>
+    <li><a href="#iletisim">İletişim</a></li>
   </ul>
-  <a class="nav-cta" href="#" id="sample-link">Örnek İncele</a>
+  <a class="nav-cta" href="#hizmet">Planları İncele</a>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
   <div class="hero-body">
-    <div class="hero-eyebrow">Müşteri Canlandırma Operasyonu &nbsp;·&nbsp; Türkiye Geneli</div>
-    <h1 class="hero-h">
-      Elinizdeki veri<br>
-      değersiz değil, sadece<br>
-      <em>yapılandırılmamış.</em>
-      <span class="hero-second">3 İş Gününde Öncelikli Temas Dosyanız Hazır</span>
+    <div class="hero-eyebrow">Müşteri Canlandırma Operasyonu</div>
+    <h1 class="hero-h" style="font-size: clamp(3.5rem, 8vw, 8rem);">
+      Atıl veriyi <em>nakde,</em><br>
+      karmaşayı <em>netliğe</em><br>
+      dönüştürün.
     </h1>
+    <div style="font-size: clamp(1.1rem, 2vw, 1.4rem); font-weight: 500; color: var(--on-dark-m); margin-top: 1.5rem; letter-spacing: -0.01em;">
+      3 İş Gününde Operasyona Hazır Temas Dosyanız Masanızda
+    </div>
   </div>
   <div class="hero-foot">
     <p class="hero-desc">
-      Yeni bir yazılım, bot veya CRM kurmuyoruz. Ofisinizdeki dağınık, takibi zor kayıtları alıp, "kim, hangi sırayla, hangi notla aranacak" netliğine sahip profesyonel bir operasyon dosyasına dönüştürüyoruz.
+      Yeni bir yazılım, bot veya CRM kurmuyoruz. Ofisinizdeki dağınık, takibi zor kayıtları alıp, ekibiniz için "kim, hangi sırayla, hangi notla aranacak" netliğine sahip profesyonel bir operasyon dosyasına dönüştürüyoruz.
     </p>
     <div class="hero-acts">
-      <a class="btn btn-solid" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2cw09XGYEYPh2KeOf4pXnBxKDF1ELmzATsKNTWsx8K86BR4ZiIsubvd2LHCbjZ8Py4CLszWQJw" target="_blank" rel="noopener">Uygunluk Görüşmesi</a>
-      <a class="btn btn-accent" href="#" id="sample-link-hero">Örnek Dosyayı Gör</a>
-      <a class="btn btn-ghost-d" href="#hizmet">Detayları Gör</a>
+      <a class="btn btn-solid" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2cw09XGYEYPh2KeOf4pXnBxKDF1ELmzATsKNTWsx8K86BR4ZiIsubvd2LHCbjZ8Py4CLszWQJw" target="_blank" rel="noopener">Ön Görüşme Ayarla</a>
+      <a class="btn btn-accent" href="#" id="sample-link-hero">Örnek İncele</a>
+      <a class="btn btn-ghost-d" href="#hizmet">Fiyatları Gör</a>
     </div>
   </div>
 </section>
@@ -1029,7 +1033,10 @@
         <li>Önceliklendirme (A/B/C)</li>
         <li>Yazılı/Sözlü Temas Notları</li>
       </ul>
-      <a class="pc-cta" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2cw09XGYEYPh2KeOf4pXnBxKDF1ELmzATsKNTWsx8K86BR4ZiIsubvd2LHCbjZ8Py4CLszWQJw" target="_blank" rel="noopener">Operasyonu Başlat</a>
+      <div style="display: flex; gap: 0.5rem; margin-top: auto;">
+        <a class="pc-cta" style="flex: 1;" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2cw09XGYEYPh2KeOf4pXnBxKDF1ELmzATsKNTWsx8K86BR4ZiIsubvd2LHCbjZ8Py4CLszWQJw" target="_blank" rel="noopener">Ön Görüşme</a>
+        <a class="pc-cta" style="flex: 1; background: #000; color: #fff; border-color: #000;" href="https://shopier.com" target="_blank" rel="noopener">Shopier</a>
+      </div>
     </div>
     
     <div class="pc hot">
@@ -1047,7 +1054,10 @@
         <li>Önceliklendirme (A/B/C)</li>
         <li>Yazılı/Sözlü Temas Notları</li>
       </ul>
-      <a class="pc-cta" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2cw09XGYEYPh2KeOf4pXnBxKDF1ELmzATsKNTWsx8K86BR4ZiIsubvd2LHCbjZ8Py4CLszWQJw" target="_blank" rel="noopener">Operasyonu Başlat</a>
+      <div style="display: flex; gap: 0.5rem; margin-top: auto;">
+        <a class="pc-cta" style="flex: 1;" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2cw09XGYEYPh2KeOf4pXnBxKDF1ELmzATsKNTWsx8K86BR4ZiIsubvd2LHCbjZ8Py4CLszWQJw" target="_blank" rel="noopener">Ön Görüşme</a>
+        <a class="pc-cta" style="flex: 1; border-color: var(--on-dark); color: var(--on-dark);" href="https://shopier.com" target="_blank" rel="noopener">Shopier</a>
+      </div>
     </div>
     
     <div class="pc">
@@ -1064,7 +1074,10 @@
         <li>Önceliklendirme (A/B/C)</li>
         <li>Yazılı/Sözlü Temas Notları</li>
       </ul>
-      <a class="pc-cta" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2cw09XGYEYPh2KeOf4pXnBxKDF1ELmzATsKNTWsx8K86BR4ZiIsubvd2LHCbjZ8Py4CLszWQJw" target="_blank" rel="noopener">Operasyonu Başlat</a>
+      <div style="display: flex; gap: 0.5rem; margin-top: auto;">
+        <a class="pc-cta" style="flex: 1;" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2cw09XGYEYPh2KeOf4pXnBxKDF1ELmzATsKNTWsx8K86BR4ZiIsubvd2LHCbjZ8Py4CLszWQJw" target="_blank" rel="noopener">Ön Görüşme</a>
+        <a class="pc-cta" style="flex: 1; background: #000; color: #fff; border-color: #000;" href="https://shopier.com" target="_blank" rel="noopener">Shopier</a>
+      </div>
     </div>
   </div>
   
@@ -1108,18 +1121,24 @@
   <div class="p-steps">
     <div class="p-step">
       <span class="p-num">01</span>
-      <div class="p-title">Veri Kabulü</div>
-      <p class="p-desc">Ekibinizi yavaşlatan dağınık, karmaşık veya takibi zor müşteri datasını bize iletirsiniz.</p>
+      <div>
+        <div class="p-title" style="margin-bottom:0.5rem;">Veri Kabulü</div>
+        <p class="p-desc">Ekibinizi yavaşlatan dağınık, karmaşık veya takibi zor müşteri datasını bize iletirsiniz.</p>
+      </div>
     </div>
     <div class="p-step">
       <span class="p-num">02</span>
-      <div class="p-title">Önceliklendirme</div>
-      <p class="p-desc">Veriniz titizlikle temizlenir. Kayıtlar A/B/C önceliklerine ayrılır; her biri için temas gerekçesi ve arka plan notu oluşturulur.</p>
+      <div>
+        <div class="p-title" style="margin-bottom:0.5rem;">Önceliklendirme</div>
+        <p class="p-desc">Veriniz titizlikle temizlenir. Kayıtlar A/B/C önceliklerine ayrılır; her biri için temas gerekçesi ve arka plan notu oluşturulur.</p>
+      </div>
     </div>
     <div class="p-step">
       <span class="p-num">03</span>
-      <div class="p-title">Teslimat & Aksiyon</div>
-      <p class="p-desc">3 iş günü içinde, ekibinizin doğrudan kullanabileceği net operasyon dosyanızı teslim ederiz.</p>
+      <div>
+        <div class="p-title" style="margin-bottom:0.5rem;">Teslimat & Aksiyon</div>
+        <p class="p-desc">3 iş günü içinde, ekibinizin doğrudan kullanabileceği net operasyon dosyanızı teslim ederiz.</p>
+      </div>
     </div>
   </div>
 </section>
@@ -1142,21 +1161,23 @@
 
 <!-- CTA -->
 <section id="iletisim">
-  <div class="cta-eyebrow">İlk Görüşme</div>
+  <div class="cta-eyebrow">Hemen Başlayın</div>
   <h2 class="cta-h">
-    Listenizi<br>
-    <em>Netleştirelim.</em>
+    Atıl Listenizi<br>
+    <em>Nakde Çevirin.</em>
   </h2>
-  <p class="cta-sub">Sistemin ofisinize uygunluğunu değerlendirmek için 15 dakikalık kısa bir görüşme yapalım. Kapsam netleşirse hemen harekete geçeriz.</p>
+  <p class="cta-sub">Sistemin ofisinize uygunluğunu değerlendirmek için 15 dakikalık bir ön görüşme yapalım. Kapsam netleşirse operasyona anında başlarız.</p>
   <div class="cta-acts">
-    <a class="btn btn-cream" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2cw09XGYEYPh2KeOf4pXnBxKDF1ELmzATsKNTWsx8K86BR4ZiIsubvd2LHCbjZ8Py4CLszWQJw" target="_blank" rel="noopener">15 Dakikalık Görüşme</a>
-    <a class="btn btn-accent" href="#" id="sample-link-cta">Örnek Dosyayı Gör</a>
+    <a class="btn btn-cream" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2cw09XGYEYPh2KeOf4pXnBxKDF1ELmzATsKNTWsx8K86BR4ZiIsubvd2LHCbjZ8Py4CLszWQJw" target="_blank" rel="noopener">Ön Görüşme Ayarla</a>
+    <a class="btn btn-accent" href="#" id="sample-link-cta">Örnek İncele</a>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <img class="site-logo footer-logo" src="logo_new.png" alt="Ediz &amp; Co.">
+  <a href="#" style="font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.2rem; font-weight: 800; color: #ffffff; text-decoration: none; letter-spacing: -0.03em;">
+    Ediz <span style="color: var(--accent);">&amp;</span> Co.
+  </a>
   <ul class="foot-links">
     <li><a href="#iletisim">İletişim</a></li>
     <li><a href="#" id="kvkk-link">KVKK Aydınlatma Metni</a></li>
@@ -1266,8 +1287,31 @@
         Müşteri verilerinizi işledikten sonra, ekibinize bu formatta aksiyona hazır bir temas dosyası sunuyoruz. Her satırda öncelik, gerekçe, arka plan notu, yazılı temas notu ve sözlü temas notu yer alır.
       </p>
       
-      <div class="sample-img-wrap">
-        <img src="playbook.png" alt="Müşteri Canlandırma Panosu Örneği">
+      <div class="sample-img-wrap" style="background: transparent; border: none; overflow-x: auto; margin-top: 1.5rem;">
+        <table style="width: 100%; border-collapse: collapse; min-width: 600px; text-align: left;">
+          <thead>
+            <tr style="border-bottom: 1px solid var(--rule-d);">
+              <th style="padding: 0.8rem; font-size: 0.75rem; color: var(--on-dark-m); font-weight: 600;">MÜŞTERİ</th>
+              <th style="padding: 0.8rem; font-size: 0.75rem; color: var(--on-dark-m); font-weight: 600;">SKOR</th>
+              <th style="padding: 0.8rem; font-size: 0.75rem; color: var(--on-dark-m); font-weight: 600;">GEREKÇE</th>
+              <th style="padding: 0.8rem; font-size: 0.75rem; color: var(--on-dark-m); font-weight: 600;">TEMAS NOTU (SÖZLÜ)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid rgba(255,255,255,0.05);">
+              <td style="padding: 1rem 0.8rem; font-size: 0.85rem; font-weight: 500;">Ahmet Yılmaz</td>
+              <td style="padding: 1rem 0.8rem;"><span style="background: #10b981; color: #fff; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.7rem; font-weight: 700;">A</span></td>
+              <td style="padding: 1rem 0.8rem; font-size: 0.8rem; color: var(--on-dark-m);">Bütçe 25M+, 6 aydır aranmadı.</td>
+              <td style="padding: 1rem 0.8rem; font-size: 0.8rem; line-height: 1.5;">"Ahmet Bey merhaba, 6 ay önce ilgilendiğiniz bölgede yeni bir portföy listeye girdi..."</td>
+            </tr>
+            <tr>
+              <td style="padding: 1rem 0.8rem; font-size: 0.85rem; font-weight: 500;">Banu Demir</td>
+              <td style="padding: 1rem 0.8rem;"><span style="background: #f59e0b; color: #fff; padding: 0.25rem 0.5rem; border-radius: 4px; font-size: 0.7rem; font-weight: 700;">B</span></td>
+              <td style="padding: 1rem 0.8rem; font-size: 0.8rem; color: var(--on-dark-m);">Fiyat düşüşü bekliyor.</td>
+              <td style="padding: 1rem 0.8rem; font-size: 0.8rem; line-height: 1.5;">"Banu Hanım merhaba, radarınızdaki projede fiyat avantajı oluştu, hemen paylaşmak istedim..."</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
       
       <div class="sample-actions">
