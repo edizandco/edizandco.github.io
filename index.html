@@ -19,18 +19,18 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg:       #e4e4e7;
-      --bg-off:   #d4d4d8;
-      --ink:      #09090b;
-      --ink-2:    #27272a;
-      --mute:     #71717a;
+      --bg:       #18181b;
+      --bg-off:   #111113;
+      --ink:      #ffffff;
+      --ink-2:    #e4e4e7;
+      --mute:     #a1a1aa;
       --accent:   #dc2626;
       --accent-h: #b91c1c;
       --dark:     #09090b;
       --on-dark:  #ffffff;
       --on-dark-m: #a1a1aa;
-      --rule:     #e4e4e7;
-      --rule-d:   #27272a;
+      --rule:     #27272a;
+      --rule-d:   #1c1c1f;
     }
 
     html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
@@ -393,28 +393,28 @@
     }
     .pc {
       padding: 3rem 2.2rem;
-      background: rgba(255, 255, 255, 0.45);
+      background: #18181b;
       backdrop-filter: blur(12px);
       border: 1px solid var(--rule);
-      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.02);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
       display: flex; flex-direction: column;
       position: relative; transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     }
     .pc:hover {
-      background: rgba(255, 255, 255, 0.75);
+      background: #202024;
       transform: translateY(-4px);
-      box-shadow: 0 10px 40px rgba(15, 23, 42, 0.05);
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
     }
     .pc.hot {
-      background: var(--dark);
+      background: #09090b;
       color: var(--on-dark);
-      border-color: var(--dark);
-      box-shadow: 0 10px 40px rgba(9, 9, 11, 0.15);
+      border: 1px solid var(--accent);
+      box-shadow: 0 10px 40px rgba(220, 38, 38, 0.15);
     }
     .pc.hot:hover {
-      background: #18181b;
+      background: #121214;
       transform: translateY(-4px);
-      box-shadow: 0 20px 50px rgba(10, 15, 29, 0.25);
+      box-shadow: 0 20px 50px rgba(220, 38, 38, 0.25);
     }
     .pc-badge {
       position: absolute; top: 0; left: 50%;
