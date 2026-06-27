@@ -4,13 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ediz & Co. — Müşteri Canlandırma Operasyonu</title>
-  <meta name="description" content="Emlak ofislerindeki atıl ve soğuk müşteri verilerini 3 iş gününde sıcak satış fırsatlarına dönüştürüyoruz. 3 iş günü teslimat garantili operasyon." />
+  <meta name="description" content="Orta ve büyük emlak ofislerinin dağınık, takibi zor ve önceliklendirilmemiş müşteri datasını 3 iş gününde aksiyona hazır temas dosyasına dönüştürüyoruz." />
   <meta property="og:title" content="Ediz & Co. — Müşteri Canlandırma Operasyonu" />
-  <meta property="og:description" content="Atıl ve soğuk müşteri verilerinizi 3 iş gününde sıcak satış fırsatlarına dönüştürün. 3 iş günü teslimat garantili operasyon." />
+  <meta property="og:description" content="Dağınık müşteri datasını ekibinizin kimi, hangi sırayla, hangi notla arayacağını gösteren öncelikli temas dosyasına dönüştürün." />
   <meta property="og:url" content="https://edizandco.com" />
   <meta property="og:type" content="website" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://edizandco.com" />
+  <link rel="icon" href="logo_new.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -72,7 +73,20 @@
       background: var(--dark);
       border-bottom: 1px solid var(--rule-d);
     }
-    .nav-logo { text-decoration: none; flex-shrink: 0; }
+    .nav-logo { text-decoration: none; flex-shrink: 0; display: inline-flex; align-items: center; }
+    .site-logo {
+      display: block;
+      width: 168px;
+      height: 34px;
+      object-fit: cover;
+      object-position: center 52%;
+      filter: invert(1);
+      mix-blend-mode: screen;
+    }
+    .site-logo.footer-logo {
+      width: 142px;
+      height: 28px;
+    }
 
     .nav-mid {
       display: flex; gap: 2.5rem; list-style: none;
@@ -98,7 +112,7 @@
        HERO
     ───────────────────────────────────── */
     .hero {
-      min-height: 100vh;
+      min-height: 92vh;
       background: var(--dark);
       display: flex; flex-direction: column;
       padding: 0 4vw;
@@ -109,23 +123,23 @@
       display: flex; flex-direction: column;
       justify-content: flex-end;
       padding-top: 10rem;
-      padding-bottom: 4rem;
+      padding-bottom: 2.8rem;
     }
-    .hero-eyebrow {
-      font-size: 0.65rem; font-weight: 600;
-      letter-spacing: 0.24em; text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 3rem;
-      display: flex; align-items: center; gap: 1rem;
-      opacity: 0; animation: fadeUp 0.7s ease forwards 0.1s;
-    }
-    .hero-eyebrow::before {
-      content: ''; width: 28px; height: 1px;
-      background: var(--accent); flex-shrink: 0;
+	    .hero-eyebrow {
+	      font-size: 0.65rem; font-weight: 600;
+	      letter-spacing: 0.24em; text-transform: uppercase;
+	      color: rgba(233,231,232,0.46);
+	      margin-bottom: 2.4rem;
+	      display: flex; align-items: center; gap: 1rem;
+	      opacity: 0; animation: fadeUp 0.7s ease forwards 0.1s;
+	    }
+	    .hero-eyebrow::before {
+	      content: ''; width: 28px; height: 1px;
+	      background: rgba(233,231,232,0.22); flex-shrink: 0;
     }
 
     .hero-h {
-      font-size: clamp(4.2rem, 11.5vw, 12rem);
+      font-size: clamp(4rem, 10.2vw, 10.8rem);
       font-weight: 900;
       line-height: 0.91;
       letter-spacing: -0.04em;
@@ -133,10 +147,10 @@
       max-width: 1400px;
       opacity: 0; animation: fadeUp 0.7s ease forwards 0.25s;
     }
-    .hero-h em {
-      font-style: normal;
-      color: var(--accent);
-    }
+	    .hero-h em {
+	      font-style: normal;
+	      color: rgba(233,231,232,0.72);
+	    }
     .hero-second {
       display: block;
       font-size: 0.65em;
@@ -147,7 +161,7 @@
     }
 
     .hero-foot {
-      padding: 2rem 0;
+      padding: 1.4rem 0;
       border-top: 1px solid var(--rule-d);
       display: grid;
       grid-template-columns: 1fr auto;
@@ -663,7 +677,8 @@
        RESPONSIVE
     ───────────────────────────────────── */
     @media (max-width: 1024px) {
-      .nav-mid { display: none; }
+	    .nav-mid { display: none; }
+      .site-logo { width: 140px; height: 30px; }
     }
     @media (max-width: 900px) {
       .hero-foot { grid-template-columns: 1fr; gap: 2rem; }
@@ -904,7 +919,7 @@
 <!-- NAV -->
 <nav>
   <a class="nav-logo" href="#">
-    <img src="logo_new.png" alt="Ediz &amp; Co." style="height: 32px; width: auto; filter: invert(1); mix-blend-mode: screen;">
+    <img class="site-logo" src="logo_new.png" alt="Ediz &amp; Co.">
   </a>
   <ul class="nav-mid">
     <li><a href="#hizmet">Hizmet</a></li>
@@ -918,19 +933,19 @@
   <div class="hero-body">
     <div class="hero-eyebrow">Müşteri Canlandırma Operasyonu &nbsp;·&nbsp; Türkiye Geneli</div>
     <h1 class="hero-h">
-      Masada unuttuğunuz<br>
-      parayı hızlıca<br>
-      <em>topluyoruz.</em>
-      <span class="hero-second">Eski Müşterilerinizi 3 İş Gününde Sıcak Fırsata Çevirin</span>
+      Dağınık müşteri<br>
+      datasını aksiyona<br>
+      <em>hazırlarız.</em>
+      <span class="hero-second">3 İş Gününde Öncelikli Temas Dosyası</span>
     </h1>
   </div>
   <div class="hero-foot">
     <p class="hero-desc">
-      Yeni bir yazılım veya araç satmıyoruz. Kenarda bekleyen, aranmamış, ulaşılamamış veya soğumuş eski müşteri veri tabanınızı alıp, ekibiniz için "kim aranacak, ne söylenecek" detaylarını içeren hazır bir fırsat listesine (operasyon dosyasına) dönüştürüyoruz.
+      Yeni bir yazılım veya araç satmıyoruz. Ofisinizdeki dağınık, takibi zor veya önceliklendirilmemiş müşteri kayıtlarını alıp, ekibiniz için "kim, hangi sırayla, hangi notla aranacak" netliğine sahip bir temas dosyasına dönüştürüyoruz.
     </p>
     <div class="hero-acts">
-      <a class="btn btn-solid" href="https://www.shopier.com/edizandco/48435203" target="_blank" rel="noopener">Operasyonu Başlat (Shopier)</a>
-      <a class="btn btn-accent" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2cw09XGYEYPh2KeOf4pXnBxKDF1ELmzATsKNTWsx8K86BR4ZiIsubvd2LHCbjZ8Py4CLszWQJw" target="_blank" rel="noopener">Ön Görüşme Ayarla</a>
+      <a class="btn btn-solid" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2cw09XGYEYPh2KeOf4pXnBxKDF1ELmzATsKNTWsx8K86BR4ZiIsubvd2LHCbjZ8Py4CLszWQJw" target="_blank" rel="noopener">15 Dakikalık Görüşme</a>
+      <a class="btn btn-accent" href="#" id="sample-link-hero">Örnek Dosyayı Gör</a>
       <a class="btn btn-ghost-d" href="#hizmet">Detayları Gör</a>
     </div>
   </div>
@@ -940,38 +955,38 @@
 <div class="ticker">
   <div class="ticker-track">
     <span>Müşteri Canlandırma Operasyonu</span><span class="dot">&nbsp;·&nbsp;</span>
-    <span>3 İş Günü Garanti</span><span class="dot">&nbsp;·&nbsp;</span>
-    <span>Evrensel Operasyon Dosyası</span><span class="dot">&nbsp;·&nbsp;</span>
-    <span>Aksiyona Hazır Liste</span><span class="dot">&nbsp;·&nbsp;</span>
+    <span>3 İş Günü Teslimat Standardı</span><span class="dot">&nbsp;·&nbsp;</span>
+    <span>Öncelikli Temas Dosyası</span><span class="dot">&nbsp;·&nbsp;</span>
+    <span>Yazılı ve Sözlü Temas Notları</span><span class="dot">&nbsp;·&nbsp;</span>
     <span>Müşteri Canlandırma Operasyonu</span><span class="dot">&nbsp;·&nbsp;</span>
-    <span>3 İş Günü Garanti</span><span class="dot">&nbsp;·&nbsp;</span>
-    <span>Evrensel Operasyon Dosyası</span><span class="dot">&nbsp;·&nbsp;</span>
-    <span>Aksiyona Hazır Liste</span><span class="dot">&nbsp;·&nbsp;</span>
+    <span>3 İş Günü Teslimat Standardı</span><span class="dot">&nbsp;·&nbsp;</span>
+    <span>Öncelikli Temas Dosyası</span><span class="dot">&nbsp;·&nbsp;</span>
+    <span>Yazılı ve Sözlü Temas Notları</span><span class="dot">&nbsp;·&nbsp;</span>
   </div>
 </div>
 
 <!-- STATEMENT -->
 <section class="statement reveal">
   <div class="s-left">
-    <div class="s-big-num">80<span class="s-big-unit">%</span></div>
-    <p class="s-big-label">Emlak ofislerinin sahip olduğu verinin çok büyük kısmı "soğuk liste" olarak atıl durumda kalır ve paraya dönüşmez.</p>
+    <div class="s-big-num">3<span class="s-big-unit">İş Günü</span></div>
+    <p class="s-big-label">Uygun veri ve ödeme geldikten sonra standart teslimat süresi. Veri yapılandırma gerekirse +2 iş günü eklenir.</p>
     <div class="s-mini-stats">
       <div class="s-mini">
-        <div class="s-mini-v">3<em> İş Günü</em></div>
-        <div class="s-mini-l">Teslimat Süresi</div>
+        <div class="s-mini-v">45<em>K</em></div>
+        <div class="s-mini-l">Taban Operasyon</div>
       </div>
       <div class="s-mini">
-        <div class="s-mini-v">500<em>+</em></div>
-        <div class="s-mini-l">İşlenen Kayıt</div>
+        <div class="s-mini-v">500</div>
+        <div class="s-mini-l">Standart Üst Sınır</div>
       </div>
     </div>
   </div>
   <div class="s-right">
     <div class="s-label">Durum Özeti</div>
     <div class="s-quote">
-      Çekmecede bekleyen veya CRM'de unutulan eski müşteri veriniz aslında saf altın. <em>Sadece nasıl canlandıracağınızı bilmiyorsunuz.</em>
+      Ekibinizin problemi veri eksikliği değil; <em>hangi kayda önce döneceğini net görememesi.</em>
     </div>
-    <p class="s-body">Biz ofisinize özel bir canlandırma operasyonu yürütüyoruz. Yüzlerce eski kaydı analiz ediyor, hangisinin şu an alıcı/satıcı potansiyeli taşıdığını tespit edip size aksiyona hazır bir fırsat listesi sunuyoruz.</p>
+    <p class="s-body">Biz ofisinize özel bir önceliklendirme operasyonu yürütüyoruz. Kayıtları temizliyor, A/B/C önceliklerine ayırıyor ve her satır için yazılı/sözlü temas notu üretiyoruz. Satış garantisi değil, ekip aksiyon netliği teslim ediyoruz.</p>
   </div>
 </section>
 
@@ -980,41 +995,41 @@
   <div class="sec-head-dark">
     <div>
       <div class="sec-label-sm">4 Net Çıktı</div>
-      <h2 class="sec-h-dark">Yatırımınızın<br><em>karşılığını alın.</em></h2>
+      <h2 class="sec-h-dark">Teslim edilen<br><em>net çıktı.</em></h2>
     </div>
   </div>
   <div class="oc-table">
     <div class="oc-row">
       <span class="oc-n">01</span>
       <div>
-        <span class="oc-tag">Derin Analiz</span>
-        <div class="oc-title">Veri Çözümlemesi</div>
+        <span class="oc-tag">Temizlik</span>
+        <div class="oc-title">Düzenli Veri Tablosu</div>
       </div>
-      <p class="oc-desc">Yüzlerce kaydın neden durduğunu tespit ederiz. Kim alıcı, kim satıcı adayı, kimin neye ihtiyacı var; tek tek ortaya çıkarırız.</p>
+      <p class="oc-desc">Tekrarlı ve dağınık kayıtlar düzenlenir. Eksik veya karmaşık veri gerekiyorsa ayrı veri yapılandırma sürecine alınır.</p>
     </div>
     <div class="oc-row">
       <span class="oc-n">02</span>
       <div>
         <span class="oc-tag">Önceliklendirme</span>
-        <div class="oc-title">En Sıcak Fırsatlar</div>
+        <div class="oc-title">A/B/C Öncelik Skoru</div>
       </div>
-      <p class="oc-desc">Tüm liste içinden hangi müşterinin hemen aranması gerektiğini puanlar ve zaman kaybını önleyecek öncelikli listeyi oluştururuz.</p>
+      <p class="oc-desc">Ekip, listeye düz bakmak yerine önce hangi kayda döneceğini görür. Öncelik gerekçesi her satırda açıkça yazılır.</p>
     </div>
     <div class="oc-row">
       <span class="oc-n">03</span>
       <div>
-        <span class="oc-tag">Operasyon Dosyası</span>
-        <div class="oc-title">Satış Senaryoları (Playbook)</div>
+        <span class="oc-tag">Temas Notları</span>
+        <div class="oc-title">Yazılı ve Sözlü Notlar</div>
       </div>
-      <p class="oc-desc">Ekibinize kiminle ne konuşacağını kelimesi kelimesine veren mesaj şablonları ve telefon senaryolarını teslim ederiz.</p>
+      <p class="oc-desc">Her kayıt için mevcut kayıt bilgilerindeki bağlama göre yazılı ve sözlü temas notu hazırlanır. Kanal seçimi emlak ofisine bırakılır.</p>
     </div>
     <div class="oc-row">
       <span class="oc-n">04</span>
       <div>
-        <span class="oc-tag">Hızlı Nakit Dönüşü</span>
-        <div class="oc-title">Atıl Veriden Satışa</div>
+        <span class="oc-tag">Operasyon</span>
+        <div class="oc-title">Takip Netliği</div>
       </div>
-      <p class="oc-desc">Ekibiniz yeni lead aramakla vakit kaybetmek yerine, zaten elinizde olan sıcak fırsatlara ulaşıp haftalar içinde kapanış yapar.</p>
+      <p class="oc-desc">Danışman ekibi, aynı dosyada kiminle, hangi sırayla ve hangi notla temas kuracağını görür. Sonuç görüşme kalitesine ve portföy dengesine bağlıdır.</p>
     </div>
   </div>
 </section>
@@ -1024,27 +1039,27 @@
   <div class="auth-left">
     <div class="sec-label-sm" style="font-size: 0.63rem; font-weight: 600; letter-spacing: 0.22em; text-transform: uppercase; margin-bottom: 1.2rem; display: flex; align-items: center; gap: 0.7rem;">
       <span style="display:inline-block; width:18px; height:1px; background:var(--accent);"></span>
-      Arkanızdaki Güç: Ediz & Co.
+      Operasyon Yaklaşımı: Ediz & Co.
     </div>
     <h2 class="auth-h">
-      Emlak satışında<br><em>veri mühendisliği.</em>
+      Emlak ekipleri için<br><em>aksiyon netliği.</em>
     </h2>
     <p class="auth-desc">
-      Biz standart bir pazarlama ajansı değiliz. Kurumsal gayrimenkul ofislerinin elinde biriken binlerce "ölü" datayı, yapay zeka destekli analizlerle işliyor ve ekibinize "kim, ne zaman, hangi senaryo ile aranmalı" diyen matematiksel bir operasyon sunuyoruz. Sizin yerinize tahmin yürütmeyi bırakıp, kesin verilere odaklanıyoruz.
+      Biz yazılım, bot veya CRM kurulumu satmıyoruz. Orta ve büyük gayrimenkul ofislerinin dağınık müşteri kayıtlarını operasyonel bir temas dosyasına çeviriyoruz: öncelik, gerekçe, arka plan notu, yazılı temas notu ve sözlü temas notu.
     </p>
   </div>
   <div class="auth-right">
     <div class="auth-stat">
-      <div class="auth-stat-v">AI Destekli</div>
-      <div class="auth-stat-l">Önceliklendirme Algoritması</div>
+      <div class="auth-stat-v">Tek Dosya</div>
+      <div class="auth-stat-l">Excel / Google Sheets Teslimat</div>
     </div>
     <div class="auth-stat">
-      <div class="auth-stat-v">Tam Uyumlu</div>
-      <div class="auth-stat-l">KVKK & GDPR Standartları</div>
+      <div class="auth-stat-v">Sınırlı Kapsam</div>
+      <div class="auth-stat-l">Portföy, CRM, Bot Yok</div>
     </div>
     <div class="auth-stat">
-      <div class="auth-stat-v">Veriye Dayalı</div>
-      <div class="auth-stat-l">Satış & İtiraz Karşılama Senaryoları</div>
+      <div class="auth-stat-v">Asenkron</div>
+      <div class="auth-stat-l">1 Tur / 7 Gün İnce Ayar</div>
     </div>
   </div>
 </section>
@@ -1057,35 +1072,77 @@
       <h2 class="sec-h-dark">Müşteri Canlandırma<br><em>Operasyonu</em></h2>
     </div>
     <div class="sec-sub-dark">
-      Eski listenizi canlandırıyor, size<br>
-      <strong>masada kalan parayı getiriyoruz.</strong>
+      Dağınık müşteri datasını<br>
+      <strong>aksiyona hazır hale getiriyoruz.</strong>
     </div>
   </div>
   
-  <div class="hizmet-card">
-    <div class="hizmet-card-eyebrow">Tüm Süreç Dahil</div>
-    <div class="hizmet-card-header">
-      <div>
-        <h3 class="hizmet-card-title">Komple Canlandırma</h3>
-        <p class="hizmet-card-subtitle">500 kayda kadar tam veri analizi ve aksiyon listesi.</p>
+  <div class="pricing-grid">
+    <div class="pc">
+      <div class="pc-tier">BAŞLANGIÇ</div>
+      <div class="pc-name">Taban Paket</div>
+      <div class="pc-delivery">3 İş Günü Teslimat</div>
+      <div class="pc-price-row">
+        <span class="pc-amt">45.000</span>
+        <span class="pc-cur">₺</span>
       </div>
-      <div class="hizmet-card-price-row">
-        <span class="hizmet-card-price-amount">45.000</span><span class="hizmet-card-price-currency">₺</span>
-      </div>
+      <div class="pc-setup">1 - 500 Kayıt Arası</div>
+      <ul class="pc-feats">
+        <li>Veri Çözümleme</li>
+        <li>Önceliklendirme (A/B/C)</li>
+        <li>Yazılı/Sözlü Temas Notları</li>
+      </ul>
+      <a class="pc-cta" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2cw09XGYEYPh2KeOf4pXnBxKDF1ELmzATsKNTWsx8K86BR4ZiIsubvd2LHCbjZ8Py4CLszWQJw" target="_blank" rel="noopener">Görüşme Ayarla</a>
     </div>
     
-    <div class="hizmet-card-divider"></div>
+    <div class="pc hot">
+      <div class="pc-badge">Popüler</div>
+      <div class="pc-tier">ORTA ÖLÇEK</div>
+      <div class="pc-name">Pro Paket</div>
+      <div class="pc-delivery">3 İş Günü Teslimat</div>
+      <div class="pc-price-row">
+        <span class="pc-amt">60.000</span>
+        <span class="pc-cur">₺</span>
+      </div>
+      <div class="pc-setup">501 - 750 Kayıt Arası</div>
+      <ul class="pc-feats">
+        <li>Veri Çözümleme</li>
+        <li>Önceliklendirme (A/B/C)</li>
+        <li>Yazılı/Sözlü Temas Notları</li>
+      </ul>
+      <a class="pc-cta" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2cw09XGYEYPh2KeOf4pXnBxKDF1ELmzATsKNTWsx8K86BR4ZiIsubvd2LHCbjZ8Py4CLszWQJw" target="_blank" rel="noopener">Görüşme Ayarla</a>
+    </div>
     
-    <ul class="hizmet-card-features">
-      <li>500 Kayda Kadar Kapsam</li>
-      <li>3 İş Günü Teslimat</li>
-      <li>1 Tur İnce Ayar Garantisi</li>
-      <li>Evrensel Operasyon Dosyası</li>
-    </ul>
-    
-    <div class="hizmet-card-actions">
-      <a class="btn btn-accent" href="https://www.shopier.com/edizandco/48435203" target="_blank" rel="noopener">Operasyonu Başlat (Shopier)</a>
-      <a class="btn btn-ghost-d" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2cw09XGYEYPh2KeOf4pXnBxKDF1ELmzATsKNTWsx8K86BR4ZiIsubvd2LHCbjZ8Py4CLszWQJw" target="_blank" rel="noopener">Ön Görüşme Ayarla</a>
+    <div class="pc">
+      <div class="pc-tier">BÜYÜK VERİ</div>
+      <div class="pc-name">Maks Paket</div>
+      <div class="pc-delivery">3 İş Günü Teslimat</div>
+      <div class="pc-price-row">
+        <span class="pc-amt">70.000</span>
+        <span class="pc-cur">₺</span>
+      </div>
+      <div class="pc-setup">751 - 1000 Kayıt Arası</div>
+      <ul class="pc-feats">
+        <li>Veri Çözümleme</li>
+        <li>Önceliklendirme (A/B/C)</li>
+        <li>Yazılı/Sözlü Temas Notları</li>
+      </ul>
+      <a class="pc-cta" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2cw09XGYEYPh2KeOf4pXnBxKDF1ELmzATsKNTWsx8K86BR4ZiIsubvd2LHCbjZ8Py4CLszWQJw" target="_blank" rel="noopener">Görüşme Ayarla</a>
+    </div>
+  </div>
+  
+  <div class="pricing-terms">
+    <div class="pt">
+      <strong>Veri Yapılandırma Opsiyonu (+10.000 ₺)</strong>
+      Veriniz Excel/CSV formunda değilse (PDF, WhatsApp vb.), ekibimiz veriyi yapılandırır. Bu durumda teslimat süresine +2 iş günü eklenerek toplam 5 iş günü olur.
+    </div>
+    <div class="pt">
+      <strong>Ödeme Altyapısı</strong>
+      Ana kanal IBAN'dır. Shopier, hazır ve onaylıysa kredi kartı/taksit için opsiyonel olarak sunulur.
+    </div>
+    <div class="pt">
+      <strong>Teslimat ve Gecikme Kalkanı</strong>
+      Ödeme sonrası Müşteri'nin uygun veriyi teslim etmesi için azami süresi 7 takvim günüdür. Uygun veri tarafımıza ulaştığında operasyon geri sayımı başlar.
     </div>
   </div>
 </section>
@@ -1096,9 +1153,9 @@
 <!-- GUARANTEE -->
 <section class="guarantee reveal">
   <div class="g-num">3<sup>İş Günü</sup></div>
-  <h3 class="g-h">Sıcak Fırsatlara<br><em>hızla ulaşın.</em></h3>
-  <p class="g-desc">Operasyon dosyanızı 3 iş günü içinde eksiksiz olarak teslim ediyoruz. Zaman kaybetmeden satışa başlayın.</p>
-  <p class="g-fine">Aksiyona hazır listenin size teslim edilme hızı garanti altındadır. (500 kayıt limitli.)</p>
+  <h3 class="g-h">Aksiyona Hazır Listeye<br><em>hızla ulaşın.</em></h3>
+  <p class="g-desc">Uygun veri ve ödeme tamamlandığında standart teslimat süresi 3 iş günüdür. Veri yapılandırma gerekiyorsa +2 iş günü eklenir.</p>
+  <p class="g-fine">Teslim edilen dosya; öncelik, gerekçe, arka plan notu, yazılı temas notu ve sözlü temas notu içerir.</p>
 </section>
 
 <!-- PROCESS -->
@@ -1108,24 +1165,24 @@
       <div class="sec-label-sm">Süreç</div>
       <h2 class="sec-h-light">3 İş Gününde <em>Nasıl Çalışır?</em></h2>
     </div>
-    <p class="sec-sub-light">Eski listelerinizi anında sıcak fırsatlara dönüştüren net ve şeffaf operasyon.</p>
+    <p class="sec-sub-light">Dağınık müşteri datasını net bir temas dosyasına çeviren sınırlı ve şeffaf operasyon.</p>
   </div>
 
   <div class="p-steps">
     <div class="p-step">
       <span class="p-num">01</span>
       <div class="p-title">Veri Kabulü</div>
-      <p class="p-desc">Kenarda bekleyen, aranmamış, ulaşılamamış veya soğumuş 500'e kadar eski müşteri kaydınızı bize teslim edersiniz.</p>
+      <p class="p-desc">1-500 kayıt arasındaki dağınık, takibi zor veya önceliklendirilmemiş müşteri datasını Excel/CSV/Google Sheets formatında iletirsiniz.</p>
     </div>
     <div class="p-step">
       <span class="p-num">02</span>
-      <div class="p-title">Derinlemesine Analiz</div>
-      <p class="p-desc">Yapay zeka ve operasyon tecrübemizle veriyi tarar; her bir kaydın kim olduğunu, neden durduğunu ve nasıl yeniden tetiklenebileceğini saptarız.</p>
+      <div class="p-title">Önceliklendirme</div>
+      <p class="p-desc">Veri temizlenir, tekrarlar ayıklanır ve kayıtlar A/B/C önceliklerine ayrılır. Her kayıt için temas gerekçesi ve arka plan notu hazırlanır.</p>
     </div>
     <div class="p-step">
       <span class="p-num">03</span>
       <div class="p-title">Teslimat & Aksiyon</div>
-      <p class="p-desc">3 iş günü içinde; ekibinize kimi arayacağını, kime WhatsApp'tan yazacağını ve temas sırasında tam olarak hangi notu/teklifi kullanacağını gösteren operasyon dosyanızı teslim ederiz.</p>
+      <p class="p-desc">3 iş günü içinde; ekibinize görüşmeler sırasında odaklanmaları gereken öncelikleri ve hangi temas notunu kullanacaklarını gösteren operasyon dosyanızı teslim ederiz.</p>
     </div>
   </div>
 </section>
@@ -1134,11 +1191,11 @@
 <div class="numbers reveal">
   <div class="num">
     <div class="num-v">3<em> İş Günü</em></div>
-    <p class="num-l">Maksimum Teslimat</p>
+    <p class="num-l">Standart Teslimat</p>
   </div>
   <div class="num">
-    <div class="num-v">500<em>+</em></div>
-    <p class="num-l">Kapasite / Data</p>
+    <div class="num-v">1000</div>
+    <p class="num-l">Maksimum Kapasite</p>
   </div>
   <div class="num">
     <div class="num-v">0<em>₺</em></div>
@@ -1148,21 +1205,21 @@
 
 <!-- CTA -->
 <section id="iletisim">
-  <div class="cta-eyebrow">Hemen Deneyin</div>
+  <div class="cta-eyebrow">İlk Görüşme</div>
   <h2 class="cta-h">
-    Masadaki<br>
-    <em>Parayı Alın.</em>
+    Listenizi<br>
+    <em>Netleştirelim.</em>
   </h2>
-  <p class="cta-sub">Sistemin gücünü görmek için elinizdeki en zorlu veya en eski veriyle bize ulaşın.</p>
+  <p class="cta-sub">Uygun olup olmadığını görmek için 15 dakikalık kısa bir görüşme yapalım. Kapsam netleşirse teklif ve veri şablonu ile ilerleriz.</p>
   <div class="cta-acts">
-    <a class="btn btn-cream" href="https://www.shopier.com/edizandco/48435203" target="_blank" rel="noopener">Operasyonu Başlat (Shopier)</a>
-    <a class="btn btn-accent" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2cw09XGYEYPh2KeOf4pXnBxKDF1ELmzATsKNTWsx8K86BR4ZiIsubvd2LHCbjZ8Py4CLszWQJw" target="_blank" rel="noopener">Ön Görüşme Ayarla</a>
+    <a class="btn btn-cream" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2cw09XGYEYPh2KeOf4pXnBxKDF1ELmzATsKNTWsx8K86BR4ZiIsubvd2LHCbjZ8Py4CLszWQJw" target="_blank" rel="noopener">15 Dakikalık Görüşme</a>
+    <a class="btn btn-accent" href="#" id="sample-link-cta">Örnek Dosyayı Gör</a>
   </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
-  <img src="logo_new.png" alt="Ediz &amp; Co." style="height: 28px; width: auto; filter: invert(1); mix-blend-mode: screen;">
+  <img class="site-logo footer-logo" src="logo_new.png" alt="Ediz &amp; Co.">
   <ul class="foot-links">
     <li><a href="#iletisim">İletişim</a></li>
     <li><a href="#" id="kvkk-link">KVKK Aydınlatma Metni</a></li>
@@ -1176,26 +1233,23 @@
     <button class="modal-close" id="kvkk-close">&times;</button>
     <div class="modal-body">
       <h2>KVKK Aydınlatma Metni</h2>
-      <p style="font-size: 0.75rem; color: var(--mute); margin-bottom: 1.5rem; font-style: italic;">
-        <strong>DİKKAT:</strong> Bu belge operasyonel bir taslak (operational template) olup, nihai hukuki bağlayıcılığı için profesyonel hukuk danışmanlığına tabi tutulmalıdır.
-      </p>
       
       <h3>1. Veri Sorumlusu ve Veri İşleyen Kimliği</h3>
       <p>Bu aydınlatma metni, 6698 sayılı Kişisel Verilerin Korunması Kanunu ("KVKK") uyarınca, veri sorumlusu sıfatını taşıyan <strong>[Müşteri/Emlak Ofisi Unvanı]</strong> ("Veri Sorumlusu") tarafından sağlanan kişisel verilerin, veri işleyen sıfatıyla <strong>Ediz & Co.</strong> ("Veri İşleyen") tarafından ne şekilde işlendiğine dair bilgilendirme amacıyla hazırlanmıştır.</p>
       
       <h3>2. Kişisel Verilerin İşlenme Amacı ve Hukuki Sebebi</h3>
-      <p>Ediz & Co.'ya iletilen isim, telefon numarası, e-posta, iletişim geçmişi ve müşteri taleplerine ilişkin veriler; gayrimenkul pazarlama stratejilerinin optimize edilmesi, yapay zeka destekli önceliklendirme skorlarının oluşturulması ve profesyonel iletişim metinlerinin (Sözlü/Yazılı açılış cümleleri) üretilmesi amacıyla işlenmektedir. Bu veri işleme faaliyeti, taraflar arasındaki hizmet sözleşmesinin ifası hukuki sebebine dayanmaktadır.</p>
+      <p>Ediz & Co.'ya iletilen isim, telefon numarası, e-posta, iletişim geçmişi ve müşteri taleplerine ilişkin veriler; müşteri kayıtlarının düzenlenmesi, önceliklendirilmesi ve profesyonel sözlü/yazılı temas notlarının üretilmesi amacıyla işlenmektedir. Bu veri işleme faaliyeti, taraflar arasındaki hizmet sözleşmesinin ifası hukuki sebebine dayanmaktadır.</p>
       
       <h3>3. Veri Güvenliği ve Müdahale (Best-Effort Redaction)</h3>
-      <p>Veri İşleyen (Ediz & Co.), veri güvenliğini sağlamak ve uluslararası LLM (Yapay Zeka) servislerine açık Kişisel Veri (PII) aktarımını engellemek amacıyla;</p>
+      <p>Veri İşleyen (Ediz & Co.), veri güvenliğini sağlamak ve açık Kişisel Veri (PII) aktarım riskini azaltmak amacıyla;</p>
       <ul>
         <li>İsimler, telefon numaraları, T.C. Kimlik Numaraları, e-posta adresleri ve açık adres bileşenleri üzerinde Regex ve şablon tabanlı yerel maskeleme (Pseudonymization) uygular.</li>
         <li>İşlemler "en iyi gayretle maskeleme" (best-effort redaction) prensibiyle gerçekleştirilir.</li>
-        <li>Maskelenmiş (kimliksizleştirilmiş) veriler, yalnızca işlem süresi boyunca ilgili yapay zeka API sağlayıcısının (Google Gemini) veri kullanım politikalarına uygun olarak bulut tabanlı uç noktalara anlık olarak iletilir ve sağlayıcı tarafından eğitim amacıyla <strong>kullanılmamaktadır</strong>.</li>
+        <li>Operasyonun gerektirdiği durumlarda veriler yerel işlem veya opsiyonel servisler üzerinden, maskeleme prensibi korunarak işlenir.</li>
       </ul>
       
       <h3>4. Kişisel Verilerin Saklanması ve İmhası</h3>
-      <p>Ediz & Co., hizmet kapsamında işlediği ham müşteri veri tabanını, maskelenmiş çalışma dosyalarını ve tüm analiz çıktılarını, Müşteri'ye nihai Excel teslimatının yapılmasını takip eden <strong>14 gün içinde</strong> (Revizyon ve İnce Ayar Garantisi süresinin bitimiyle birlikte) sistemlerinden kalıcı ve geri döndürülemez şekilde silmeyi hedeflemektedir. Silme işlemi sonrasında Veri Sorumlusu'na bir "Veri İmha Teyit Belgesi" sunulacaktır.</p>
+      <p>Ediz & Co., hizmet kapsamında işlediği ham müşteri veri tabanını, maskelenmiş çalışma dosyalarını ve tüm analiz çıktılarını, Müşteri'ye nihai Excel teslimatının yapılmasını takip eden <strong>14 gün içinde</strong> (Revizyon ve İnce Ayar Garantisi süresinin bitimiyle birlikte) aktif sistemlerinden silmeyi taahhüt eder. Silme süreci sonrasında Veri Sorumlusu'na bir "Veri İmha Teyit Belgesi" sunulacaktır.</p>
       
       <h3>5. İlgili Kişinin Hakları</h3>
       <p>İlgili kişiler, KVKK Madde 11 kapsamındaki haklarını (veri işlenip işlenmediğini öğrenme, silinmesini talep etme, düzeltme vb.) doğrudan Veri Sorumlusu olan <strong>[Müşteri/Emlak Ofisi Unvanı]</strong>'na iletmelidir. Ediz & Co. Veri İşleyen sıfatıyla yalnızca Veri Sorumlusunun talimatları doğrultusunda işlem yapmaktadır.</p>
@@ -1236,30 +1290,33 @@
   }
 
   // Sample Modal Logic
-  const sampleLink = document.getElementById('sample-link');
-  const sampleModal = document.getElementById('sample-modal');
-  const sampleClose = document.getElementById('sample-close');
+  const closeSampleModal = () => {
+    const sampleModal = document.getElementById('sample-modal');
+    if (!sampleModal) return;
+    sampleModal.classList.remove('active');
+    document.body.style.overflow = '';
+  };
 
-  if (sampleLink && sampleModal && sampleClose) {
-    sampleLink.addEventListener('click', (e) => {
+  document.addEventListener('click', (e) => {
+    const sampleTrigger = e.target.closest('#sample-link, #sample-link-hero, #sample-link-cta');
+    const sampleModal = document.getElementById('sample-modal');
+
+    if (sampleTrigger && sampleModal) {
       e.preventDefault();
       sampleModal.classList.add('active');
       document.body.style.overflow = 'hidden';
-    });
+      return;
+    }
 
-    const closeSampleModal = () => {
-      sampleModal.classList.remove('active');
-      document.body.style.overflow = '';
-    };
+    if (e.target.closest('#sample-close') || e.target === sampleModal) {
+      closeSampleModal();
+    }
+  });
 
-    sampleClose.addEventListener('click', closeSampleModal);
-    sampleModal.addEventListener('click', (e) => {
-      if (e.target === sampleModal) closeSampleModal();
-    });
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && sampleModal.classList.contains('active')) closeSampleModal();
-    });
-  }
+  document.addEventListener('keydown', (e) => {
+    const sampleModal = document.getElementById('sample-modal');
+    if (e.key === 'Escape' && sampleModal?.classList.contains('active')) closeSampleModal();
+  });
 </script>
 
 <!-- SAMPLE MODAL -->
@@ -1269,7 +1326,7 @@
     <div class="modal-body">
       <h2 style="border-bottom-color: var(--rule-d);">Örnek Operasyon Dosyası</h2>
       <p style="color: var(--on-dark-m);">
-        Müşteri verilerinizi işledikten sonra, ekibinize bu formatta aksiyona hazır bir pano sunuyoruz. Hangi müşterinin "Sıcak Fırsat" (Hot Opportunity) olduğu algoritmamız tarafından belirlenir ve arama yapacak kişi için sağ taraftaki "Playbook & Call Script" (Arama Senaryosu) anında hazırdır.
+        Müşteri verilerinizi işledikten sonra, ekibinize bu formatta aksiyona hazır bir temas dosyası sunuyoruz. Her satırda öncelik, gerekçe, arka plan notu, yazılı temas notu ve sözlü temas notu yer alır.
       </p>
       
       <div class="sample-img-wrap">
@@ -1277,8 +1334,7 @@
       </div>
       
       <div class="sample-actions">
-        <a class="btn btn-accent" href="https://www.shopier.com/edizandco/48435203" target="_blank" rel="noopener">Kendi Verinizle Başlatın</a>
-        <a class="btn btn-ghost-cta" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2cw09XGYEYPh2KeOf4pXnBxKDF1ELmzATsKNTWsx8K86BR4ZiIsubvd2LHCbjZ8Py4CLszWQJw" target="_blank" rel="noopener">Ön Görüşme Ayarla</a>
+        <a class="btn btn-accent" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ2cw09XGYEYPh2KeOf4pXnBxKDF1ELmzATsKNTWsx8K86BR4ZiIsubvd2LHCbjZ8Py4CLszWQJw" target="_blank" rel="noopener">Ön Görüşme Ayarla</a>
       </div>
     </div>
   </div>
