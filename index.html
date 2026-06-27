@@ -744,6 +744,39 @@
       .cta-acts { flex-direction: column; align-items: center; }
       .hizmet-card { padding: 2.5rem 1.5rem; }
     }
+    
+    @media (max-width: 600px) {
+      .hero-body { padding-top: 8rem; }
+      .statement, #sonuclar, #paketler, #hizmet, .guarantee, #iletisim, .bonus { 
+        padding: 5rem 5vw !important; 
+      }
+      #surec { padding: 5rem 5vw 4rem 5vw !important; }
+      #ornek { padding: 2rem 5vw 6rem 5vw !important; }
+      .num { padding: 3rem 1.5rem; }
+
+      .hero-h { font-size: clamp(2.5rem, 11vw, 4rem); line-height: 1.1; }
+      .s-big-num { font-size: clamp(4.5rem, 18vw, 7rem); }
+      .g-num { font-size: clamp(5.5rem, 20vw, 8rem); }
+      .sec-h-dark, .sec-h-light, .bonus-h { font-size: clamp(2.2rem, 9vw, 3rem); line-height: 1.15; }
+      .cta-h { font-size: clamp(2.8rem, 11vw, 4rem); line-height: 1; }
+      .num-v { font-size: clamp(2.5rem, 10vw, 4rem); }
+      .g-h { font-size: clamp(1.8rem, 8vw, 2.5rem); }
+
+      .p-step { padding: 1.5rem; gap: 1.2rem; grid-template-columns: 44px 1fr; }
+      .pc { padding: 2rem 1.2rem; }
+      #ornek > div:last-child { padding: 1.5rem 1rem !important; }
+      #ornek > div:last-child > div:first-child { 
+        font-size: 0.55rem !important; 
+        padding: 0.4rem 0.6rem !important; 
+        left: 1rem !important; 
+        top: -10px !important;
+      }
+      
+      .btn { width: 100%; text-align: center; }
+      .hero-acts, .cta-acts { flex-direction: column; width: 100%; gap: 1rem; }
+      .s-mini-stats { flex-direction: column; gap: 1.5rem; padding-top: 1.5rem; }
+      .hero-foot { gap: 1.5rem; }
+    }
 
     /* ─────────────────────────────────────
        PRICING (HIZMET) CLEAN STYLES
