@@ -585,11 +585,16 @@
       display: grid;
       grid-template-columns: 56px 1fr;
       gap: 2rem;
-      padding: 2.2rem 0;
-      border-bottom: 1px solid var(--rule);
+      padding: 2.5rem;
+      margin-bottom: 1.5rem;
       align-items: start;
+      background: rgba(24, 24, 27, 0.4);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 16px;
     }
-    .p-step:first-child { border-top: 1px solid var(--rule); }
+    .p-step:last-child { margin-bottom: 0; }
     .p-num {
       font-size: 0.72rem; font-weight: 700;
       letter-spacing: 0.2em; color: var(--accent);
@@ -1169,36 +1174,36 @@
             <td style="padding: 1.2rem 0.8rem; font-size: 0.9rem; font-weight: 500; color: #fff;">Ahmet Yılmaz</td>
             <td style="padding: 1.2rem 0.8rem;"><span style="background: #10b981; color: #000; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 800;">A</span></td>
             <td style="padding: 1.2rem 0.8rem; font-size: 0.85rem; color: var(--on-dark-m);">Bütçe 25M+, 6 aydır aranmadı.</td>
-            <td style="padding: 1.2rem 0.8rem; font-size: 0.85rem; line-height: 1.5; color: #e4e4e7;">"Ahmet Bey merhaba, 6 ay önce ilgilendiğiniz bölgede yeni portföy..."</td>
-            <td style="padding: 1.2rem 0.8rem; font-size: 0.85rem; line-height: 1.5; color: #e4e4e7;">"Ahmet Bey merhaba. Aradığınız kriterlere uygun yeni bir portföy satışa çıktı..."</td>
+            <td style="padding: 1.2rem 0.8rem; font-size: 0.85rem; line-height: 1.5; color: #e4e4e7;">"Ahmet Bey nasılsınız? 6 ay önce ilgilendiğiniz bölgede, tam aradığınız kriterlerde off-market bir portföy listeye girdi. Müsaitliğiniz var mı?"</td>
+            <td style="padding: 1.2rem 0.8rem; font-size: 0.85rem; line-height: 1.5; color: #e4e4e7;">"Ahmet Bey merhaba. Aradığınız kriterlere uygun, ilana girmemiş yeni bir portföy satışa çıktı. Sunum ve lokasyon bilgileri ektedir."</td>
           </tr>
           <tr style="border-bottom: 1px solid rgba(255,255,255,0.03);">
             <td style="padding: 1.2rem 0.8rem; font-size: 0.9rem; font-weight: 500; color: #fff;">Banu Demir</td>
             <td style="padding: 1.2rem 0.8rem;"><span style="background: #f59e0b; color: #000; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 800;">B</span></td>
             <td style="padding: 1.2rem 0.8rem; font-size: 0.85rem; color: var(--on-dark-m);">Fiyat düşüşü bekliyor.</td>
-            <td style="padding: 1.2rem 0.8rem; font-size: 0.85rem; line-height: 1.5; color: #e4e4e7;">"Banu Hanım merhaba, radarınızdaki projede fiyat avantajı oluştu..."</td>
-            <td style="padding: 1.2rem 0.8rem; font-size: 0.85rem; line-height: 1.5; color: #e4e4e7;">"Banu Hanım merhaba. Takip ettiğiniz projede fiyat avantajı oluştu..."</td>
+            <td style="padding: 1.2rem 0.8rem; font-size: 0.85rem; line-height: 1.5; color: #e4e4e7;">"Banu Hanım merhaba. Takip ettiğiniz projede beklediğimiz fiyat kırılımı nihayet gerçekleşti. Fırsat kaçmadan hemen haber vermek istedim."</td>
+            <td style="padding: 1.2rem 0.8rem; font-size: 0.85rem; line-height: 1.5; color: #e4e4e7;">"Banu Hanım merhaba. Radarınızdaki projede %15'lik bir fiyat avantajı oluştu. Güncel rakamlar ve ödeme planı PDF olarak ektedir."</td>
           </tr>
           <tr style="border-bottom: 1px solid rgba(255,255,255,0.03);">
             <td style="padding: 1.2rem 0.8rem; font-size: 0.9rem; font-weight: 500; color: #fff;">Cenk Yalçın</td>
             <td style="padding: 1.2rem 0.8rem;"><span style="background: #10b981; color: #000; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 800;">A</span></td>
             <td style="padding: 1.2rem 0.8rem; font-size: 0.85rem; color: var(--on-dark-m);">Nakit hazır, acil fırsat arıyor.</td>
-            <td style="padding: 1.2rem 0.8rem; font-size: 0.85rem; line-height: 1.5; color: #e4e4e7;">"Cenk Bey, elinizdeki nakdi değerlendirebileceğimiz acil bir fırsat geldi..."</td>
-            <td style="padding: 1.2rem 0.8rem; font-size: 0.85rem; line-height: 1.5; color: #e4e4e7;">"Cenk Bey selamlar, acil bir kelepir portföy düştü, ilk sizinle paylaşıyorum..."</td>
+            <td style="padding: 1.2rem 0.8rem; font-size: 0.85rem; line-height: 1.5; color: #e4e4e7;">"Cenk Bey selamlar. Nakdinizi hızlıca değerlendirebileceğimiz çok cazip bir ticari mülk düştü. Rakam çok iyi, ilk sizi aramak istedim."</td>
+            <td style="padding: 1.2rem 0.8rem; font-size: 0.85rem; line-height: 1.5; color: #e4e4e7;">"Cenk Bey selamlar. Bölgede acil satılık, getirisi yüksek ticari bir portföy fırsatı var. Rakamlar ve amortisman süresi ektedir."</td>
           </tr>
           <tr style="border-bottom: 1px solid rgba(255,255,255,0.03);">
             <td style="padding: 1.2rem 0.8rem; font-size: 0.9rem; font-weight: 500; color: #fff;">Derya Kılıç</td>
             <td style="padding: 1.2rem 0.8rem;"><span style="background: #a1a1aa; color: #000; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 800;">C</span></td>
             <td style="padding: 1.2rem 0.8rem; font-size: 0.85rem; color: var(--on-dark-m);">1 yıldır tamamen ulaşılamıyor.</td>
             <td style="padding: 1.2rem 0.8rem; font-size: 0.85rem; line-height: 1.5; color: #e4e4e7;">-</td>
-            <td style="padding: 1.2rem 0.8rem; font-size: 0.85rem; line-height: 1.5; color: #e4e4e7;">"Derya Hanım son durumunuz nedir, emlak arayışınız devam ediyor mu?"</td>
+            <td style="padding: 1.2rem 0.8rem; font-size: 0.85rem; line-height: 1.5; color: #e4e4e7;">"Derya Hanım merhaba. Uzun zamandır görüşemedik. Emlak yatırım arayışınız veya bölge talebiniz devam ediyor mu?"</td>
           </tr>
           <tr>
             <td style="padding: 1.2rem 0.8rem; font-size: 0.9rem; font-weight: 500; color: #fff;">Efe Arslan</td>
             <td style="padding: 1.2rem 0.8rem;"><span style="background: #f59e0b; color: #000; padding: 0.25rem 0.6rem; border-radius: 4px; font-size: 0.75rem; font-weight: 800;">B</span></td>
             <td style="padding: 1.2rem 0.8rem; font-size: 0.85rem; color: var(--on-dark-m);">Faiz indirimi bekliyor.</td>
-            <td style="padding: 1.2rem 0.8rem; font-size: 0.85rem; line-height: 1.5; color: #e4e4e7;">"Efe Bey, piyasada faiz öncesi bir hareketlenme var, önden pozisyon alabiliriz..."</td>
-            <td style="padding: 1.2rem 0.8rem; font-size: 0.85rem; line-height: 1.5; color: #e4e4e7;">"Efe Bey selamlar, faiz öncesi avantajlı kredi kampanyalı projeleri iletiyorum."</td>
+            <td style="padding: 1.2rem 0.8rem; font-size: 0.85rem; line-height: 1.5; color: #e4e4e7;">"Efe Bey merhaba. Beklediğimiz faiz indirimleri öncesinde piyasada hareketlenme başladı. Önden pozisyon alabileceğimiz 2 kampanya var, aktarabilir miyim?"</td>
+            <td style="padding: 1.2rem 0.8rem; font-size: 0.85rem; line-height: 1.5; color: #e4e4e7;">"Efe Bey selamlar. Faiz beklentisi öncesi avantajlı kredi sunan 2 yeni projenin detaylarını iletiyorum. İncelemek isterseniz randevu organize edebiliriz."</td>
           </tr>
         </tbody>
       </table>
