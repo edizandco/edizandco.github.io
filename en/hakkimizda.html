@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    // Immediate Theme Application to prevent FOUC
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  </script>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ediz & Co. — About</title>
+  <meta name="description" content="We are not just designers. We build digital authority. Ultra-premium Framer & Webflow showcases." />
+  <link rel="icon" href="../logo_white.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <!-- LOADER -->
+  <div id="loader">
+    <img class="loader-logo" src="../logo_white.png" alt="Ediz &amp; Co." />
+  </div>
+
+  <!-- NAV -->
+  <nav id="main-nav">
+    <a class="nav-logo" href="index.html">
+      <img src="../logo_white.png" alt="Ediz &amp; Co." />
+    </a>
+    <ul class="nav-mid">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="hakkimizda.html" class="active">About</a></li>
+      <li><a href="hizmetler.html">Services</a></li>
+      <li><a href="referanslar.html">Clients</a></li>
+      <li><a href="iletisim.html">Contact</a></li>
+    </ul>
+    <div class="nav-right" style="display: flex; align-items: center; gap: 1.2rem; flex-shrink: 0;">
+      <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+        <svg class="sun-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" style="position: absolute;"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        <svg class="moon-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" style="position: absolute;"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+      </button>
+      <a href="../hakkimizda.html" class="lang-btn" style="text-decoration: none; font-size: 0.65rem; font-weight: 700; color: var(--ink); border: 1px solid var(--rule-b); padding: 0.4rem 0.6rem; border-radius: 4px; letter-spacing: 0.05em; transition: all 0.25s;">TR</a>
+      <a class="nav-cta" href="iletisim.html"><span>Book Call</span></a>
+    </div>
+  </nav>
+
+  <!-- SUB HERO -->
+  <section class="sub-hero">
+    <div class="sub-hero-content">
+      <div class="sec-label">About Us</div>
+      <h1 class="sec-h" style="font-size: clamp(2.6rem, 5.5vw, 4.8rem);">We are not a design agency.<br><em>We are an operational unit.</em></h1>
+    </div>
+  </section>
+
+  <!-- SUB CONTENT -->
+  <section class="sub-content">
+    <div class="grid-cols-2">
+      <div>
+        <p class="auth-desc" style="max-width: 100%; margin-bottom: 2rem;">
+          Ediz & Co. is a highly disciplined web design operation established to control the digital presence, reputation, and prestige of B2B brands and local businesses.
+        </p>
+        <p class="auth-desc" style="max-width: 100%;">
+          We do not deal with endless meetings or time-wasting hidden behind indecisive and slow mechanisms. For us, there is only one reality: maximizing the strength, velocity, and prestige of your business in the digital space.
+        </p>
+      </div>
+      <div class="auth-right">
+        <div class="auth-stat">
+          <div class="auth-stat-v">5 Days</div>
+          <div class="auth-stat-l">Delivery Standard</div>
+        </div>
+        <div class="auth-stat">
+          <div class="auth-stat-v">Framer &amp; Webflow</div>
+          <div class="auth-stat-l">Maximum Performance Infrastructure</div>
+        </div>
+        <div class="auth-stat">
+          <div class="auth-stat-v">Zero Errors</div>
+          <div class="auth-stat-l">1 round of precise revision instead of long meetings</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <a href="index.html">
+      <img src="../logo_white.png" alt="Ediz &amp; Co." />
+    </a>
+    <ul class="foot-links">
+      <li><a href="https://www.instagram.com/edizandco" target="_blank" rel="noopener">Instagram</a></li>
+      <li><a href="https://www.linkedin.com/company/edizandco" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="iletisim.html">Contact</a></li>
+    </ul>
+    <p class="foot-r">© 2026 Ediz &amp; Co.</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script>
+    const tl = gsap.timeline({ onComplete: () => { document.getElementById('loader').classList.add('done'); } });
+    tl.to('#loader', { duration: 0.8, delay: 0.5 })
+      .to('#main-nav', { y: 0, duration: 0.6, ease: 'power3.out' }, '+=0.1')
+      .to('.sec-label', { opacity: 1, y: 0, duration: 0.5, stagger: 0.1 }, '-=0.2')
+      .to('.sec-h', { opacity: 1, y: 0, duration: 0.6 }, '-=0.3');
+  </script>
+  <script>
+    // Theme Toggle Handler
+    window.addEventListener('DOMContentLoaded', () => {
+      const toggleBtn = document.getElementById('theme-toggle');
+      if (toggleBtn) {
+        toggleBtn.addEventListener('click', () => {
+          const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
+          const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+          document.documentElement.setAttribute('data-theme', newTheme);
+          localStorage.setItem('theme', newTheme);
+          
+          // Dispatch custom event for WebGL canvas reaction
+          window.dispatchEvent(new CustomEvent('themechanged', { detail: { theme: newTheme } }));
+        });
+      }
+    });
+  </script>
+</body>
+</html>
