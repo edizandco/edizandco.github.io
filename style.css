@@ -73,7 +73,7 @@ h1, h2, h3, h4, h5, h6, .pc-name, .auth-stat-v, .num-v {
    NAV
 ═══════════════════════════════════════ */
 nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1001;
   display: flex; align-items: center; justify-content: space-between;
   padding: 1.2rem 4vw;
   background: var(--nav-bg);
