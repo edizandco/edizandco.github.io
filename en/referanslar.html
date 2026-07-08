@@ -42,9 +42,26 @@
         <svg class="moon-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" style="position: absolute;"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
       </button>
       <a href="../referanslar.html" class="lang-btn" style="text-decoration: none; font-size: 0.65rem; font-weight: 700; color: var(--ink); border: 1px solid var(--rule-b); padding: 0.4rem 0.6rem; border-radius: 4px; letter-spacing: 0.05em; transition: all 0.25s;">TR</a>
+      <button id="mobile-toggle" class="hamburger" aria-label="Open Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
       <a class="nav-cta" href="iletisim.html"><span>Book Call</span></a>
     </div>
   </nav>
+  <!-- MOBILE OVERLAY -->
+  <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+    <ul class="mobile-menu-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="hakkimizda.html">About</a></li>
+      <li><a href="hizmetler.html">Services</a></li>
+      <li><a href="referanslar.html" class="active">Clients</a></li>
+      <li><a href="iletisim.html">Contact</a></li>
+    </ul>
+    <a class="nav-cta mobile-menu-cta" href="iletisim.html"><span>Book Call</span></a>
+  </div>
+
 
   <!-- SUB HERO -->
   <section class="sub-hero">
@@ -141,6 +158,30 @@
           
           // Dispatch custom event for WebGL canvas reaction
           window.dispatchEvent(new CustomEvent('themechanged', { detail: { theme: newTheme } }));
+        });
+      }
+    });
+  </script>
+
+  <script>
+    // Mobile Menu Toggle
+    window.addEventListener('DOMContentLoaded', () => {
+      const mobileToggle = document.getElementById('mobile-toggle');
+      const mobileOverlay = document.getElementById('mobile-menu-overlay');
+      
+      if (mobileToggle && mobileOverlay) {
+        mobileToggle.addEventListener('click', () => {
+          mobileToggle.classList.toggle('active');
+          mobileOverlay.classList.toggle('active');
+        });
+        
+        // Close menu when clicking links
+        const mobileLinks = mobileOverlay.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+          link.addEventListener('click', () => {
+            mobileToggle.classList.remove('active');
+            mobileOverlay.classList.remove('active');
+          });
         });
       }
     });
