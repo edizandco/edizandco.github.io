@@ -9,13 +9,31 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Hizmetler — Ediz & Co.</title>
-  <link rel="icon" href="favicon.ico" sizes="any" />
-  <link rel="icon" href="favicon.png" type="image/png" sizes="192x192" />
-  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <meta name="description" content="Landing page, kurumsal site ve çok sayfalı web projeleri. Sabit fiyat, 5 günde teslimat, sıfır bakım derdi." />
+  <link rel="canonical" href="https://edizandco.com/hizmetler/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Hizmetler — Ediz & Co." />
+  <meta property="og:description" content="Landing page, kurumsal site ve çok sayfalı web projeleri. Sabit fiyat, 5 günde teslimat, sıfır bakım derdi." />
+  <meta property="og:url" content="https://edizandco.com/hizmetler/" />
+  <meta property="og:image" content="https://edizandco.com/og-image.jpg" />
+  <meta property="og:site_name" content="Ediz & Co." />
+  <meta property="og:locale" content="tr_TR" />
+
+  <!-- Hreflang -->
+  <link rel="alternate" hreflang="tr" href="https://edizandco.com/hizmetler/" />
+  <link rel="alternate" hreflang="en" href="https://edizandco.com/en/hizmetler/" />
+  <link rel="alternate" hreflang="x-default" href="https://edizandco.com/" />
+  <link rel="icon" href="/favicon.ico" sizes="48x48" />
+  <link rel="icon" href="/favicon.png" type="image/png" sizes="192x192" />
+  <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css?v=1.0.4" />
 </head>
 <body>
@@ -27,40 +45,40 @@
 
   <!-- NAV -->
   <nav id="main-nav">
-    <a class="nav-logo" href="index.html">
+    <a class="nav-logo" href="/">
       <img src="logo_white.png" alt="Ediz &amp; Co." />
     </a>
     <ul class="nav-mid">
-      <li><a href="index.html">Anasayfa</a></li>
-      <li><a href="hakkimizda.html">Hakkımızda</a></li>
-      <li><a href="hizmetler.html" class="active">Hizmetler</a></li>
-      <li><a href="referanslar.html">Referanslar</a></li>
-      <li><a href="iletisim.html">İletişim</a></li>
+      <li><a href="/">Anasayfa</a></li>
+      <li><a href="/hakkimizda/">Hakkımızda</a></li>
+      <li><a href="/hizmetler/" class="active">Hizmetler</a></li>
+      <li><a href="/referanslar/">Referanslar</a></li>
+      <li><a href="/iletisim/">İletişim</a></li>
     </ul>
     <div class="nav-right" style="display: flex; align-items: center; gap: 1.2rem; flex-shrink: 0;">
       <button id="theme-toggle" class="theme-btn" aria-label="Temayı Değiştir">
         <svg class="sun-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" style="position: absolute;"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
         <svg class="moon-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" style="position: absolute;"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
       </button>
-      <a href="en/hizmetler.html" class="lang-btn" style="text-decoration: none; font-size: 0.65rem; font-weight: 700; color: var(--ink); border: 1px solid var(--rule-b); padding: 0.4rem 0.6rem; border-radius: 4px; letter-spacing: 0.05em; transition: all 0.25s;">EN</a>
+      <a href="/en/hizmetler/" class="lang-btn" style="text-decoration: none; font-size: 0.65rem; font-weight: 700; color: var(--ink); border: 1px solid var(--rule-b); padding: 0.4rem 0.6rem; border-radius: 4px; letter-spacing: 0.05em; transition: all 0.25s;">EN</a>
       <button id="mobile-toggle" class="hamburger" aria-label="Menüyü Aç">
         <span></span>
         <span></span>
         <span></span>
       </button>
-      <a class="nav-cta" href="iletisim.html"><span>Görüşme Planla</span></a>
+      <a class="nav-cta" href="/iletisim/"><span>Görüşme Planla</span></a>
     </div>
   </nav>
   <!-- MOBILE OVERLAY -->
   <div class="mobile-menu-overlay" id="mobile-menu-overlay">
     <ul class="mobile-menu-links">
-      <li><a href="index.html">Anasayfa</a></li>
-      <li><a href="hakkimizda.html">Hakkımızda</a></li>
-      <li><a href="hizmetler.html" class="active">Hizmetler</a></li>
-      <li><a href="referanslar.html">Referanslar</a></li>
-      <li><a href="iletisim.html">İletişim</a></li>
+      <li><a href="/">Anasayfa</a></li>
+      <li><a href="/hakkimizda/">Hakkımızda</a></li>
+      <li><a href="/hizmetler/" class="active">Hizmetler</a></li>
+      <li><a href="/referanslar/">Referanslar</a></li>
+      <li><a href="/iletisim/">İletişim</a></li>
     </ul>
-    <a class="nav-cta mobile-menu-cta" href="iletisim.html"><span>Görüşme Planla</span></a>
+    <a class="nav-cta mobile-menu-cta" href="/iletisim/"><span>Görüşme Planla</span></a>
   </div>
 
 
@@ -80,7 +98,7 @@
         <div class="pc-name">Landing Page</div>
         <div class="pc-delivery">5 İş Günü Teslimat</div>
         <p class="pc-desc">Reklam kampanyaları ve dönüşüm odaklı (CRO) operasyonlar için optimize edilmiş yüksek hızlı tek sayfa dijital vitrin kurulumu.</p>
-        <a class="pc-cta" href="iletisim.html">Başlat</a>
+        <a class="pc-cta" href="/iletisim/">Başlat</a>
       </div>
 
       <div class="pc">
@@ -88,7 +106,7 @@
         <div class="pc-name">Web Sitesi (Maks 5 Sayfa)</div>
         <div class="pc-delivery">5 İş Günü Teslimat</div>
         <p class="pc-desc">Gelişmiş form altyapısı, kurumsal güven ve itibar yönetimi entegrasyonu tamamlanmış çok sayfalı dijital vitrin kurulumu.</p>
-        <a class="pc-cta" href="iletisim.html">Başlat</a>
+        <a class="pc-cta" href="/iletisim/">Başlat</a>
       </div>
     </div>
 
@@ -151,13 +169,13 @@
 
   <!-- FOOTER -->
   <footer>
-    <a href="index.html">
+    <a href="/">
       <img src="logo_white.png" alt="Ediz &amp; Co." />
     </a>
     <ul class="foot-links">
       <li><a href="https://www.instagram.com/edizandco" target="_blank" rel="noopener">Instagram</a></li>
       <li><a href="https://www.linkedin.com/company/edizandco" target="_blank" rel="noopener">LinkedIn</a></li>
-      <li><a href="iletisim.html">İletişim</a></li>
+      <li><a href="/iletisim/">İletişim</a></li>
     </ul>
     <p class="foot-r">© 2026 Ediz &amp; Co.</p>
   </footer>

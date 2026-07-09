@@ -9,15 +9,50 @@
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ediz & Co. — web tasarım operasyonları</title>
-  <meta name="description" content="Web siteniz yok mu? Dijital olarak yoksunuz. Framer ve Webflow ile premium dijital vitrinler." />
-  <link rel="icon" href="favicon.ico" sizes="any" />
-  <link rel="icon" href="favicon.png" type="image/png" sizes="192x192" />
-  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+  <title>Ediz & Co. — premium web tasarım ajansı</title>
+  <meta name="description" content="İşletmeniz için 5 iş günü içinde sıfırdan kodlanan, yüksek dönüşümlü premium web siteleri. Sabit fiyat, sıfır sürpriz." />
+  <link rel="canonical" href="https://edizandco.com/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Ediz & Co. — premium web tasarım ajansı" />
+  <meta property="og:description" content="İşletmeniz için 5 iş günü içinde sıfırdan kodlanan, yüksek dönüşümlü premium web siteleri. Sabit fiyat, sıfır sürpriz." />
+  <meta property="og:url" content="https://edizandco.com/" />
+  <meta property="og:image" content="https://edizandco.com/og-image.jpg" />
+  <meta property="og:site_name" content="Ediz & Co." />
+  <meta property="og:locale" content="tr_TR" />
+
+  <!-- Hreflang -->
+  <link rel="alternate" hreflang="tr" href="https://edizandco.com/" />
+  <link rel="alternate" hreflang="en" href="https://edizandco.com/en/" />
+  <link rel="alternate" hreflang="x-default" href="https://edizandco.com/" />
+  <link rel="icon" href="/favicon.ico" sizes="48x48" />
+  <link rel="icon" href="/favicon.png" type="image/png" sizes="192x192" />
+  <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css?v=1.0.4" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Ediz & Co.",
+    "url": "https://edizandco.com",
+    "logo": "https://edizandco.com/favicon.png",
+    "image": "https://edizandco.com/og-image.jpg",
+    "description": "Premium web tasarım ajansı. İşletmeniz için 5 iş günü içinde sıfırdan kodlanan yüksek dönüşümlü web siteleri.",
+    "founder": {
+      "@type": "Person",
+      "name": "Ediz Toy"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/ediz-toy/"
+    ]
+  }
+  </script>
 </head>
 <body>
 
@@ -28,40 +63,40 @@
 
   <!-- NAV -->
   <nav id="main-nav">
-    <a class="nav-logo" href="index.html">
+    <a class="nav-logo" href="/">
       <img src="logo_white.png" alt="Ediz &amp; Co." />
     </a>
     <ul class="nav-mid">
-      <li><a href="index.html" class="active">Anasayfa</a></li>
-      <li><a href="hakkimizda.html">Hakkımızda</a></li>
-      <li><a href="hizmetler.html">Hizmetler</a></li>
-      <li><a href="referanslar.html">Referanslar</a></li>
-      <li><a href="iletisim.html">İletişim</a></li>
+      <li><a href="/" class="active">Anasayfa</a></li>
+      <li><a href="/hakkimizda/">Hakkımızda</a></li>
+      <li><a href="/hizmetler/">Hizmetler</a></li>
+      <li><a href="/referanslar/">Referanslar</a></li>
+      <li><a href="/iletisim/">İletişim</a></li>
     </ul>
     <div class="nav-right" style="display: flex; align-items: center; gap: 1.2rem; flex-shrink: 0;">
       <button id="theme-toggle" class="theme-btn" aria-label="Temayı Değiştir">
         <svg class="sun-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" style="position: absolute;"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
         <svg class="moon-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" style="position: absolute;"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
       </button>
-      <a href="en/index.html" class="lang-btn" style="text-decoration: none; font-size: 0.65rem; font-weight: 700; color: var(--ink); border: 1px solid var(--rule-b); padding: 0.4rem 0.6rem; border-radius: 4px; letter-spacing: 0.05em; transition: all 0.25s;">EN</a>
+      <a href="/en/" class="lang-btn" style="text-decoration: none; font-size: 0.65rem; font-weight: 700; color: var(--ink); border: 1px solid var(--rule-b); padding: 0.4rem 0.6rem; border-radius: 4px; letter-spacing: 0.05em; transition: all 0.25s;">EN</a>
       <button id="mobile-toggle" class="hamburger" aria-label="Menüyü Aç">
         <span></span>
         <span></span>
         <span></span>
       </button>
-      <a class="nav-cta" href="iletisim.html"><span>Görüşme Planla</span></a>
+      <a class="nav-cta" href="/iletisim/"><span>Görüşme Planla</span></a>
     </div>
   </nav>
   <!-- MOBILE OVERLAY -->
   <div class="mobile-menu-overlay" id="mobile-menu-overlay">
     <ul class="mobile-menu-links">
-      <li><a href="index.html" class="active">Anasayfa</a></li>
-      <li><a href="hakkimizda.html">Hakkımızda</a></li>
-      <li><a href="hizmetler.html">Hizmetler</a></li>
-      <li><a href="referanslar.html">Referanslar</a></li>
-      <li><a href="iletisim.html">İletişim</a></li>
+      <li><a href="/" class="active">Anasayfa</a></li>
+      <li><a href="/hakkimizda/">Hakkımızda</a></li>
+      <li><a href="/hizmetler/">Hizmetler</a></li>
+      <li><a href="/referanslar/">Referanslar</a></li>
+      <li><a href="/iletisim/">İletişim</a></li>
     </ul>
-    <a class="nav-cta mobile-menu-cta" href="iletisim.html"><span>Görüşme Planla</span></a>
+    <a class="nav-cta mobile-menu-cta" href="/iletisim/"><span>Görüşme Planla</span></a>
   </div>
 
 
@@ -78,8 +113,8 @@
         Framer ve Webflow altyapısı ile premium dijital vitrininizi 5 iş günü içinde inşa ediyoruz. Hatasız. Kararsızlığa yer yok.
       </p>
       <div class="hero-acts">
-        <a class="btn btn-solid" href="iletisim.html"><span>Görüşme Planla</span></a>
-        <a class="btn btn-ghost" href="hizmetler.html">Hizmetlerimiz</a>
+        <a class="btn btn-solid" href="/iletisim/"><span>Görüşme Planla</span></a>
+        <a class="btn btn-ghost" href="/hizmetler/">Hizmetlerimiz</a>
       </div>
     </div>
     <div class="hero-canvas-wrap">
@@ -134,13 +169,13 @@
 
   <!-- FOOTER -->
   <footer>
-    <a href="index.html">
+    <a href="/">
       <img src="logo_white.png" alt="Ediz &amp; Co." />
     </a>
     <ul class="foot-links">
       <li><a href="https://www.instagram.com/edizandco" target="_blank" rel="noopener">Instagram</a></li>
       <li><a href="https://www.linkedin.com/company/edizandco" target="_blank" rel="noopener">LinkedIn</a></li>
-      <li><a href="iletisim.html">İletişim</a></li>
+      <li><a href="/iletisim/">İletişim</a></li>
     </ul>
     <p class="foot-r">© 2026 Ediz &amp; Co.</p>
   </footer>
@@ -158,7 +193,7 @@
     // THREE.JS — LIQUID METAL BLOB
     const canvas = document.getElementById('hero-canvas');
     const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.setPixelRatio(window.innerWidth < 768 ? 1 : Math.min(window.devicePixelRatio, 2));
     
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 100);
@@ -431,7 +466,7 @@
 
     // GSAP LOAD
     const tl = gsap.timeline({ onComplete: () => { document.getElementById('loader').classList.add('done'); } });
-    tl.to('#loader', { duration: 0.8, delay: 0.5 })
+    tl.to('#loader', { duration: 0.3, delay: 0 })
       .to('#main-nav', { y: 0, duration: 0.6, ease: 'power3.out' }, '+=0.1')
       .to('.hero-eyebrow', { visibility: 'visible', opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' }, '-=0.3')
       .to('.hero-h .line-inner', { y: '0%', duration: 0.8, ease: 'power3.out', stagger: 0.1 }, '-=0.3')
