@@ -39,9 +39,7 @@
 <body>
 
   <!-- LOADER -->
-  <div id="loader">
-    <div class="loader-line"></div>
-  </div>
+  
 
   <!-- NAV -->
   <nav id="main-nav">
@@ -161,9 +159,8 @@
   <!-- GSAP -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script>
-    window.addEventListener('load', () => {
-      document.getElementById('loader').classList.add('done');
-      gsap.to('#main-nav', { y: 0, duration: 0.6, ease: 'power3.out' });
+    window.addEventListener('DOMContentLoaded', () => {
+      gsap.to('#main-nav', { y: 0, duration: 0.4, ease: 'power3.out' });
     });
   </script>
   <script>

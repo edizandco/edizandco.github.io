@@ -51,25 +51,6 @@ h1, h2, h3, h4, h5, h6, .pc-name, .auth-stat-v, .num-v {
 ::selection { background: var(--ink); color: var(--bg); }
 
 /* ═══════════════════════════════════════
-   LOADING SCREEN
-═══════════════════════════════════════ */
-#loader {
-  position: fixed; inset: 0; z-index: 9999;
-  background: var(--bg);
-  display: flex; align-items: center; justify-content: center;
-  transition: opacity 0.25s ease, visibility 0.25s ease;
-}
-#loader.done { opacity: 0; visibility: hidden; pointer-events: none; }
-.loader-logo {
-  height: 24px; width: auto; opacity: 0;
-  animation: loaderPulse 1.2s ease-in-out infinite alternate;
-}
-@keyframes loaderPulse {
-  from { opacity: 0.2; }
-  to   { opacity: 1; }
-}
-
-/* ═══════════════════════════════════════
    NAV
 ═══════════════════════════════════════ */
 nav {
