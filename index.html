@@ -326,52 +326,59 @@
     const blob = new THREE.Mesh(geometry, material);
     scene.add(blob);
 
-    // Orbiting Cosmic Dust Particles (for an enigmatic/mysterious vibe)
-    const partCount = 200;
-    const partGeom = new THREE.BufferGeometry();
-    const partPos = new Float32Array(partCount * 3);
-    for (let i = 0; i < partCount * 3; i += 3) {
-      const u = Math.random();
-      const v = Math.random();
-      const theta = u * 2.0 * Math.PI;
-      const phi = Math.acos(2.0 * v - 1.0);
-      const r = 0.45 + Math.random() * 0.8; // float around the Torus
-      partPos[i] = r * Math.sin(phi) * Math.cos(theta);
-      partPos[i + 1] = r * Math.sin(phi) * Math.sin(theta);
-      partPos[i + 2] = r * Math.cos(phi);
-    }
-    partGeom.setAttribute('position', new THREE.BufferAttribute(partPos, 3));
-    const partMat = new THREE.PointsMaterial({
-      color: 0xffffff, // White stardust flakes
-      size: 0.012,
+    // Orbiting Geometric Rings (structured coordinate system)
+    const ringMat = new THREE.LineBasicMaterial({
+      color: 0xffffff,
       transparent: true,
-      opacity: 0.65,
+      opacity: 0.25,
       blending: THREE.AdditiveBlending,
     });
-    const particles = new THREE.Points(partGeom, partMat);
-    scene.add(particles);
+    
+    const ring1 = new THREE.LineLoop(
+      new THREE.BufferGeometry().setFromPoints(new THREE.Path().absarc(0, 0, 0.72, 0, Math.PI * 2).getPoints(64)),
+      ringMat
+    );
+    ring1.rotation.x = Math.PI / 4;
+    ring1.rotation.y = Math.PI / 6;
+    scene.add(ring1);
+    
+    const ring2 = new THREE.LineLoop(
+      new THREE.BufferGeometry().setFromPoints(new THREE.Path().absarc(0, 0, 0.88, 0, Math.PI * 2).getPoints(64)),
+      ringMat
+    );
+    ring2.rotation.x = -Math.PI / 3;
+    ring2.rotation.y = Math.PI / 4;
+    scene.add(ring2);
+    
+    const ring3 = new THREE.LineLoop(
+      new THREE.BufferGeometry().setFromPoints(new THREE.Path().absarc(0, 0, 1.05, 0, Math.PI * 2).getPoints(64)),
+      ringMat
+    );
+    ring3.rotation.z = Math.PI / 2;
+    ring3.rotation.x = Math.PI / 6;
+    scene.add(ring3);
 
     // Initial theme check to adjust WebGL colors on load
     const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
     if (currentTheme === 'light') {
-      partMat.color.setHex(0x000000); // black stardust for light BG
-      partMat.size = 0.020; // larger size (default 0.012)
-      partMat.needsUpdate = true;
-      ambLight.color.setHex(0x888899); // brighter ambient lighting
+      ringMat.color.setHex(0x000000);
+      ringMat.opacity = 0.12;
+      ringMat.needsUpdate = true;
+      ambLight.color.setHex(0x888899);
     }
 
     // Dynamic theme changer listener
     window.addEventListener('themechanged', (e) => {
       const theme = e.detail.theme;
       if (theme === 'light') {
-        partMat.color.setHex(0x000000);
-        partMat.size = 0.020;
-        partMat.needsUpdate = true;
+        ringMat.color.setHex(0x000000);
+        ringMat.opacity = 0.12;
+        ringMat.needsUpdate = true;
         ambLight.color.setHex(0x888899);
       } else {
-        partMat.color.setHex(0xffffff); // white stardust for dark BG
-        partMat.size = 0.012; // default size
-        partMat.needsUpdate = true;
+        ringMat.color.setHex(0xffffff);
+        ringMat.opacity = 0.25;
+        ringMat.needsUpdate = true;
         ambLight.color.setHex(0x222233);
       }
     });
@@ -427,9 +434,10 @@
       blob.rotation.y = t * 0.22;
       blob.rotation.x = t * 0.14;
       
-      // Rotate cosmic stardust particles slowly
-      particles.rotation.y = -t * 0.04;
-      particles.rotation.x = t * 0.025;
+      // Rotate concentric cosmic rings slowly
+      ring1.rotation.z = t * 0.06;
+      ring2.rotation.y = -t * 0.04;
+      ring3.rotation.x = t * 0.08;
       
       renderer.render(scene, camera);
     }
