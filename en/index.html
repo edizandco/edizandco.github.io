@@ -251,18 +251,21 @@
         return 42.0 * dot(m*m, vec4(dot(p0,x0),dot(p1,x1),dot(p2,x2),dot(p3,x3)));
       }
 
-      void main() {
+            void main() {
         vec3 pos = position;
         
-        // Smooth organic sinusoidal simplex waves
-        float n1 = snoise(pos * uNoiseFreq + uTime * 0.3);
-        float n2 = snoise(pos * uNoiseFreq * 1.8 + uTime * 0.5);
-        float noise = n1 * uNoiseAmp;
-        noise += n2 * uNoiseAmp * 0.35;
+        // Spiky/sharp noise displacement (Ridged and power-based spikes for a dangerous look)
+        float n1 = snoise(pos * uNoiseFreq * 1.8 + uTime * 0.4);
+        float n2 = snoise(pos * uNoiseFreq * 3.6 - uTime * 0.6);
+        
+        float spike1 = pow(1.0 - abs(n1), 4.0); 
+        float spike2 = pow(1.0 - abs(n2), 3.0);
+        
+        float noise = (spike1 * 0.75 + spike2 * 0.25) * uNoiseAmp * 2.5;
         
         vec2 mouseOffset = uMouse - pos.xy;
         float mouseDist = length(mouseOffset);
-        float mouseInfluence = smoothstep(1.5, 0.0, mouseDist) * 0.15;
+        float mouseInfluence = smoothstep(1.5, 0.0, mouseDist) * 0.18;
         
         pos += normal * (noise + mouseInfluence);
         
@@ -341,44 +344,9 @@
     const blob = new THREE.Mesh(geometry, material);
     scene.add(blob);
 
-    // Orbiting Geometric Rings (structured coordinate system)
-    const ringMat = new THREE.LineBasicMaterial({
-      color: 0xffffff,
-      transparent: true,
-      opacity: 0.25,
-      blending: THREE.AdditiveBlending,
-    });
-    
-    const ring1 = new THREE.LineLoop(
-      new THREE.BufferGeometry().setFromPoints(new THREE.Path().absarc(0, 0, 0.72, 0, Math.PI * 2).getPoints(64)),
-      ringMat
-    );
-    ring1.rotation.x = Math.PI / 4;
-    ring1.rotation.y = Math.PI / 6;
-    scene.add(ring1);
-    
-    const ring2 = new THREE.LineLoop(
-      new THREE.BufferGeometry().setFromPoints(new THREE.Path().absarc(0, 0, 0.88, 0, Math.PI * 2).getPoints(64)),
-      ringMat
-    );
-    ring2.rotation.x = -Math.PI / 3;
-    ring2.rotation.y = Math.PI / 4;
-    scene.add(ring2);
-    
-    const ring3 = new THREE.LineLoop(
-      new THREE.BufferGeometry().setFromPoints(new THREE.Path().absarc(0, 0, 1.05, 0, Math.PI * 2).getPoints(64)),
-      ringMat
-    );
-    ring3.rotation.z = Math.PI / 2;
-    ring3.rotation.x = Math.PI / 6;
-    scene.add(ring3);
-
     // Initial theme check to adjust WebGL colors on load
     const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
     if (currentTheme === 'light') {
-      ringMat.color.setHex(0x000000);
-      ringMat.opacity = 0.12;
-      ringMat.needsUpdate = true;
       ambLight.color.setHex(0x888899);
     }
 
@@ -386,14 +354,8 @@
     window.addEventListener('themechanged', (e) => {
       const theme = e.detail.theme;
       if (theme === 'light') {
-        ringMat.color.setHex(0x000000);
-        ringMat.opacity = 0.12;
-        ringMat.needsUpdate = true;
         ambLight.color.setHex(0x888899);
       } else {
-        ringMat.color.setHex(0xffffff);
-        ringMat.opacity = 0.25;
-        ringMat.needsUpdate = true;
         ambLight.color.setHex(0x222233);
       }
     });
@@ -449,10 +411,7 @@
       blob.rotation.y = t * 0.22;
       blob.rotation.x = t * 0.14;
       
-      // Rotate concentric cosmic rings slowly
-      ring1.rotation.z = t * 0.06;
-      ring2.rotation.y = -t * 0.04;
-      ring3.rotation.x = t * 0.08;
+
       
       renderer.render(scene, camera);
     }
