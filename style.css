@@ -57,7 +57,7 @@ h1, h2, h3, h4, h5, h6, .pc-name, .auth-stat-v, .num-v {
   position: fixed; inset: 0; z-index: 9999;
   background: var(--bg);
   display: flex; align-items: center; justify-content: center;
-  transition: opacity 0.6s ease, visibility 0.6s ease;
+  transition: opacity 0.25s ease, visibility 0.25s ease;
 }
 #loader.done { opacity: 0; visibility: hidden; pointer-events: none; }
 .loader-logo {
