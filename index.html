@@ -422,7 +422,7 @@
     ScrollTrigger.create({
       trigger: '.hero', start: 'bottom top',
       onEnterBack: () => { blobAlive = true; animateBlob(); },
-      onLeave: () => { blobAlive = false; renderer.dispose(); }
+      onLeave: () => { blobAlive = false; }
     });
 
 

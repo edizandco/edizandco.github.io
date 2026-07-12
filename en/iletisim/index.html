@@ -37,9 +37,31 @@
   <link rel="stylesheet" href="/style.css?v=1.0.4" />
 </head>
 <body>
-
-  <!-- LOADER -->
-  
+<!-- NAV -->
+  <nav id="main-nav">
+    <a class="nav-logo" href="/en/">
+      <img src="/logo_white.png" alt="Ediz &amp; Co." />
+    </a>
+    <ul class="nav-mid">
+      <li><a href="/en/">Home</a></li>
+      <li><a href="/en/hakkimizda/">About</a></li>
+      <li><a href="/en/hizmetler/">Services</a></li>
+      <li><a href="/en/referanslar/">Clients</a></li>
+      <li><a href="/en/iletisim/" class="active">Contact</a></li>
+    </ul>
+    <div class="nav-right" style="display: flex; align-items: center; gap: 1.2rem; flex-shrink: 0;">
+      <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+        <svg class="sun-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" style="position: absolute;"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+        <svg class="moon-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" style="position: absolute;"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+      </button>
+      <a href="/iletisim/" class="lang-btn" style="text-decoration: none; font-size: 0.65rem; font-weight: 700; color: var(--ink); border: 1px solid var(--rule-b); padding: 0.4rem 0.6rem; border-radius: 4px; letter-spacing: 0.05em; transition: all 0.25s;">TR</a>
+      <button id="mobile-toggle" class="hamburger" aria-label="Open Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <a class="nav-cta" href="/en/iletisim/"><span>Book Call</span></a>
+    </div>
   </nav>
   <!-- MOBILE OVERLAY -->
   <div class="mobile-menu-overlay" id="mobile-menu-overlay">
@@ -116,11 +138,9 @@
     <a href="/en/">
       <img src="/logo_white.png" alt="Ediz &amp; Co." />
     </a>
-            <ul class="foot-links">
-      <li><a href="https://x.com/edizandco" target="_blank" rel="noopener">X</a></li>
+    <ul class="foot-links">
       <li><a href="https://www.instagram.com/edizandco" target="_blank" rel="noopener">Instagram</a></li>
       <li><a href="https://www.linkedin.com/company/edizandco" target="_blank" rel="noopener">LinkedIn</a></li>
-      <li><a href="/en/hizmetler/">Services</a></li>
       <li><a href="/en/iletisim/">Contact</a></li>
     </ul>
     <p class="foot-r">© 2026 Ediz &amp; Co.</p>
