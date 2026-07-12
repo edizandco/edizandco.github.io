@@ -15,17 +15,21 @@
 }
 
 [data-theme="light"] {
-  --bg:       #FAF9F6; /* Gallery White */
-  --bg-off:   #f4f3ef; /* Card/Section off-white background */
-  --ink:      #111111; /* Warm charcoal text */
-  --ink-2:    #2c2c2e; /* Subheadings */
-  --mute:     #7c7c80; /* Muted notes */
-  --accent:   #dc2626; /* Warning red */
-  --accent-h: #b91c1c;
-  --rule:     #e4e4e7; /* Light mode dividers */
-  --rule-b:   #d4d4d8; /* Light mode borders */
-  --nav-bg:   rgba(250, 249, 246, 0.75);
-  --nav-border: rgba(0, 0, 0, 0.06);
+  --bg:          #ffffff; /* Beyaz (Saf Beyaz) */
+  --bg-logo:     #FAF9F6; /* Ediz & Co. logosunun arka plan beyaz rengi */
+  --bg-off:      #FAF9F6; /* Girişler ve bazı bölümler için Logo Beyazı */
+  --bg-gray:     #F4F4F5; /* Açık Gri */
+  --bg-champ:    #F5EEDC; /* Champagne (Açık bej / şampanya rengi) */
+  
+  --ink:         #111111; /* Sıcak antrasit yazı */
+  --ink-2:       #2c2c2e; /* Alt başlıklar */
+  --mute:        #7c7c80; /* Pasif yazılar */
+  --accent:      #dc2626; /* Vurgu kırmızısı */
+  --accent-h:    #b91c1c;
+  --rule:        #e4e4e7; /* Açık tema bölücüler */
+  --rule-b:      #d4d4d8; /* Kart sınır çizgileri */
+  --nav-bg:      rgba(255, 255, 255, 0.75);
+  --nav-border:  rgba(0, 0, 0, 0.05);
 }
 
 html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
@@ -665,6 +669,31 @@ footer img { height: 18px; width: auto; display: block; }
    ═══════════════════════════════════════ */
 [data-theme="light"] .form-group label {
   color: var(--ink); /* Warm charcoal black instead of muted gray */
+}
+
+/* ═══════════════════════════════════════
+   LIGHT THEME SECTION & CARD SEGMENTATIONS
+   ═══════════════════════════════════════ */
+[data-theme="light"] .sub-content {
+  background: var(--bg-gray); /* Sections are Light Gray */
+}
+
+[data-theme="light"] #iletisim {
+  background: var(--bg-gray);
+}
+
+[data-theme="light"] .pc {
+  background: var(--bg-champ); /* Showcase cards are Champagne/Beige */
+  border-color: rgba(220, 180, 140, 0.28);
+}
+
+[data-theme="light"] .pc:hover {
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="light"] footer {
+  background: var(--bg-logo); /* Footer is Logo Background White */
+  border-top: 1px solid var(--rule);
 }
 
 /* ═══════════════════════════════════════
