@@ -34,7 +34,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/style.css?v=1.0.7" />
+  <link rel="stylesheet" href="/style.css?v=1.0.8" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -55,13 +55,7 @@
   </script>
 </head>
 <body>
-
-  <!-- LOADER -->
-  <div id="loader">
-    <img class="loader-logo" src="/logo_white.png" alt="Ediz &amp; Co." />
-  </div>
-
-  <!-- NAV -->
+<!-- NAV -->
   <nav id="main-nav">
     <a class="nav-logo" href="/en/">
       <img src="/logo_white.png" alt="Ediz &amp; Co." />
@@ -103,14 +97,13 @@
   <!-- HERO -->
   <section class="hero" id="hero">
     <div class="hero-content">
-      <div class="hero-eyebrow">web design operations</div>
       <h1 class="hero-h">
         <span class="line"><span class="line-inner">No website?</span></span>
-        <span class="line"><span class="line-inner"><em>You don't exist</em></span></span>
-        <span class="line"><span class="line-inner"><em>digitally.</em></span></span>
+        <span class="line"><span class="line-inner"><em style="color: var(--accent);">You don't exist</em></span></span>
+        <span class="line"><span class="line-inner"><em style="color: var(--accent);">digitally.</em></span></span>
       </h1>
       <p class="hero-sub">
-        We build your premium digital showcase in 5 business days using pure, custom code. Zero errors. No room for hesitation.
+        We build premium, high-speed, custom-coded websites for B2B brands and local businesses in 5 business days.
       </p>
       <div class="hero-acts">
         <a class="btn btn-solid" href="/en/iletisim/"><span>Book a Call</span></a>
@@ -125,56 +118,29 @@
   <!-- TICKER -->
   <div class="ticker">
     <div class="ticker-track">
-      <span>web design operations</span><span class="dot">&nbsp;·&nbsp;</span>
       <span>5 Business Days Delivery</span><span class="dot">&nbsp;·&nbsp;</span>
-      <span>Zero Margin of Error</span><span class="dot">&nbsp;·&nbsp;</span>
+      <span>SEO Infrastructure</span><span class="dot">&nbsp;·&nbsp;</span>
       <span>Turnkey Setups</span><span class="dot">&nbsp;·&nbsp;</span>
-      <span>Custom Coded</span><span class="dot">&nbsp;·&nbsp;</span><span>Pure JS</span><span class="dot">&nbsp;·&nbsp;</span>
+      <span>Mobile Responsive</span><span class="dot">&nbsp;·&nbsp;</span><span>Pure JS</span><span class="dot">&nbsp;·&nbsp;</span>
       <span>Premium Digital Showcase</span><span class="dot">&nbsp;·&nbsp;</span>
-      <span>web design operations</span><span class="dot">&nbsp;·&nbsp;</span>
       <span>5 Business Days Delivery</span><span class="dot">&nbsp;·&nbsp;</span>
-      <span>Zero Margin of Error</span><span class="dot">&nbsp;·&nbsp;</span>
+      <span>SEO Infrastructure</span><span class="dot">&nbsp;·&nbsp;</span>
       <span>Turnkey Setups</span><span class="dot">&nbsp;·&nbsp;</span>
-      <span>Custom Coded</span><span class="dot">&nbsp;·&nbsp;</span><span>Pure JS</span><span class="dot">&nbsp;·&nbsp;</span>
+      <span>Mobile Responsive</span><span class="dot">&nbsp;·&nbsp;</span><span>Pure JS</span><span class="dot">&nbsp;·&nbsp;</span>
       <span>Premium Digital Showcase</span><span class="dot">&nbsp;·&nbsp;</span>
     </div>
   </div>
-
-  <!-- OFF-RAMP -->
-  <section id="sartlar">
-    <div>
-      <div class="sec-label">Disqualification</div>
-      <h2 class="auth-h">
-        No room for<br><em>hesitation.</em>
-      </h2>
-      <p class="auth-desc">
-        We work only with decisive businesses that reject long approvals, heavy bureaucracy, or slow decision-making. Our process is rapid, uncompromising, and efficient. Once payment is settled and assets are provided, our 5-day delivery window begins. We only partner with organizations capable of executing at this velocity.
-      </p>
-    </div>
-    <div class="auth-right">
-      <div class="auth-stat">
-        <div class="auth-stat-v">5 Days</div>
-        <div class="auth-stat-l">Guaranteed Delivery Window</div>
-      </div>
-      <div class="auth-stat">
-        <div class="auth-stat-v">One-Time</div>
-        <div class="auth-stat-l">Bank Transfer or Credit Card</div>
-      </div>
-      <div class="auth-stat">
-        <div class="auth-stat-v">Turnkey</div>
-        <div class="auth-stat-l">Domain &amp; Technical Setups Included</div>
-      </div>
-    </div>
-  </section>
 
   <!-- FOOTER -->
   <footer>
     <a href="/en/">
       <img src="/logo_white.png" alt="Ediz &amp; Co." />
     </a>
-    <ul class="foot-links">
+            <ul class="foot-links">
+      <li><a href="https://x.com/edizandco" target="_blank" rel="noopener">X</a></li>
       <li><a href="https://www.instagram.com/edizandco" target="_blank" rel="noopener">Instagram</a></li>
       <li><a href="https://www.linkedin.com/company/edizandco" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="/en/hizmetler/">Services</a></li>
       <li><a href="/en/iletisim/">Contact</a></li>
     </ul>
     <p class="foot-r">© 2026 Ediz &amp; Co.</p>
@@ -279,7 +245,7 @@
         return 42.0 * dot(m*m, vec4(dot(p0,x0),dot(p1,x1),dot(p2,x2),dot(p3,x3)));
       }
 
-            void main() {
+                  void main() {
         vec3 pos = position;
         
         // Sparse, razor-sharp spiky noise displacement (high bias for sparse thorns)
@@ -376,14 +342,14 @@
     // Initial theme check to adjust WebGL colors on load
     const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
     if (currentTheme === 'light') {
-      ambLight.color.setHex(0x333344);
+      ambLight.color.setHex(0x888899);
     }
 
     // Dynamic theme changer listener
     window.addEventListener('themechanged', (e) => {
       const theme = e.detail.theme;
       if (theme === 'light') {
-        ambLight.color.setHex(0x333344);
+        ambLight.color.setHex(0x888899);
       } else {
         ambLight.color.setHex(0x11111a);
       }
@@ -473,28 +439,17 @@
     animateBlob();
 
     // GSAP LOAD
-    const tl = gsap.timeline({ onComplete: () => { document.getElementById('loader').classList.add('done'); } });
-    tl.to('#loader', { duration: 0.3, delay: 0 })
-      .to('#main-nav', { y: 0, duration: 0.6, ease: 'power3.out' }, '+=0.1')
-      .to('.hero-eyebrow', { visibility: 'visible', opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' }, '-=0.3')
-      .to('.hero-h .line-inner', { y: '0%', duration: 0.8, ease: 'power3.out', stagger: 0.1 }, '-=0.3')
-      .to('.hero-sub', { visibility: 'visible', opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' }, '-=0.4')
-      .to('.hero-acts', { visibility: 'visible', opacity: 1, y: 0, duration: 0.5, ease: 'power2.out' }, '-=0.3');
+        // GSAP LOAD
+    const tl = gsap.timeline();
+    tl.to('#main-nav', { y: 0, duration: 0.4, ease: 'power3.out' })
+      .to('.hero-h .line-inner', { y: '0%', duration: 0.5, ease: 'power3.out', stagger: 0.08 }, '-=0.2')
+      .to('.hero-sub', { visibility: 'visible', opacity: 1, y: 0, duration: 0.35, ease: 'power2.out' }, '-=0.25')
+      .to('.hero-acts', { visibility: 'visible', opacity: 1, y: 0, duration: 0.35, ease: 'power2.out' }, '-=0.2');
 
-    // Scroll Animations
-    gsap.from('#sartlar .sec-label', {
-      scrollTrigger: { trigger: '#sartlar', start: 'top 75%' },
-      y: 30, opacity: 0, duration: 0.6
-    });
-    gsap.from('#sartlar h2', {
-      scrollTrigger: { trigger: '#sartlar', start: 'top 75%' },
-      y: 40, opacity: 0, duration: 0.8, delay: 0.1
-    });
-    gsap.from('#sartlar p', {
-      scrollTrigger: { trigger: '#sartlar', start: 'top 75%' },
-      y: 30, opacity: 0, duration: 0.8, delay: 0.2
-    });
-    gsap.from('.auth-right', { scrollTrigger: { trigger: '#sartlar', start: 'top 75%' }, y: 50, opacity: 0, duration: 0.8, ease: 'power3.out' });
+    gsap.set('.hero-sub', { opacity: 0, y: 15 });
+    gsap.set('.hero-acts', { opacity: 0, y: 15 });
+
+
   </script>
   <script>
     // Theme Toggle Handler
