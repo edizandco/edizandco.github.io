@@ -236,17 +236,18 @@
         return 42.0 * dot(m*m, vec4(dot(p0,x0),dot(p1,x1),dot(p2,x2),dot(p3,x3)));
       }
 
-            void main() {
+                  void main() {
         vec3 pos = position;
         
-        // Spiky/sharp noise displacement (Ridged and power-based spikes for a dangerous look)
-        float n1 = snoise(pos * uNoiseFreq * 1.8 + uTime * 0.4);
-        float n2 = snoise(pos * uNoiseFreq * 3.6 - uTime * 0.6);
+        // Sparse, razor-sharp spiky noise displacement (high bias for sparse thorns)
+        float n1 = snoise(pos * uNoiseFreq * 2.2 + uTime * 0.4);
+        float n2 = snoise(pos * uNoiseFreq * 3.8 - uTime * 0.6);
         
-        float spike1 = pow(1.0 - abs(n1), 4.0); 
-        float spike2 = pow(1.0 - abs(n2), 3.0);
+        // Subtract bias so spikes are sparse (only top peaks remain)
+        float spike1 = pow(max(0.0, n1 - 0.35) * 1.54, 4.0);
+        float spike2 = pow(max(0.0, n2 - 0.4) * 1.66, 3.0);
         
-        float noise = (spike1 * 0.75 + spike2 * 0.25) * uNoiseAmp * 2.5;
+        float noise = (spike1 * 0.8 + spike2 * 0.2) * uNoiseAmp * 3.5;
         
         vec2 mouseOffset = uMouse - pos.xy;
         float mouseDist = length(mouseOffset);
@@ -346,12 +347,34 @@
     });
 
     let mouseNorm = { x: 0, y: 0 };
+    let isHovered = false;
     const heroEl = document.getElementById('hero');
+    
     heroEl.addEventListener('mousemove', e => {
       const rect = canvas.getBoundingClientRect();
       mouseNorm.x = ((e.clientX - rect.left) / rect.width) * 2 - 1;
       mouseNorm.y = -((e.clientY - rect.top) / rect.height) * 2 + 1;
     });
+    
+    heroEl.addEventListener('mouseenter', () => {
+      isHovered = true;
+    });
+    
+    heroEl.addEventListener('mouseleave', () => {
+      isHovered = false;
+      mouseNorm.x = 0;
+      mouseNorm.y = 0;
+    });
+    
+    heroEl.addEventListener('touchstart', () => {
+      isHovered = true;
+    }, { passive: true });
+    
+    heroEl.addEventListener('touchend', () => {
+      isHovered = false;
+      mouseNorm.x = 0;
+      mouseNorm.y = 0;
+    }, { passive: true });
 
     function resizeBlob() {
       const wrap = canvas.parentElement;
@@ -379,19 +402,22 @@
       material.uniforms.uTime.value = t;
       material.uniforms.uMouse.value.lerp(new THREE.Vector2(mouseNorm.x * 1.5, mouseNorm.y * 1.5), 0.05);
       
-      // Excitation by mouse proximity
-      const dist = Math.sqrt(mouseNorm.x * mouseNorm.x + mouseNorm.y * mouseNorm.y);
+// Scroll & Hover based Spiky Dynamics
+      const scrollDamp = 1.0 - scrollProgress; // 1 at top, 0 when scrolled down
       let targetFreq = 1.45;
-      let targetAmp = 0.12;
+      let targetAmp = 0.03; // Smooth organic breathing wave by default
       
-      if (dist < 1.4) {
-        const factor = 1.0 - (dist / 1.4);
-        targetFreq = 1.45 + factor * 1.0;
-        targetAmp = 0.12 + factor * 0.08;
+      if (isHovered && scrollDamp > 0.05) {
+        // Grow sharp spikes only when hovered and not scrolled away
+        targetFreq = 2.8;
+        targetAmp = 0.22;
       }
       
-      material.uniforms.uNoiseFreq.value += (targetFreq - material.uniforms.uNoiseFreq.value) * 0.1;
-      material.uniforms.uNoiseAmp.value += (targetAmp - material.uniforms.uNoiseAmp.value) * 0.1;
+      // Force amp to 0 as page is scrolled down (liquefy / flatten)
+      targetAmp *= scrollDamp;
+      
+      material.uniforms.uNoiseFreq.value += (targetFreq - material.uniforms.uNoiseFreq.value) * 0.08;
+      material.uniforms.uNoiseAmp.value += (targetAmp - material.uniforms.uNoiseAmp.value) * 0.08;
 
       blob.rotation.y = t * 0.22;
       blob.rotation.x = t * 0.14;
@@ -415,15 +441,12 @@
     gsap.set('.hero-sub', { opacity: 0, y: 20 });
     gsap.set('.hero-acts', { opacity: 0, y: 20 });
 
+    let scrollProgress = 0;
     gsap.to('#hero-canvas', {
       scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: 1 },
       opacity: 0, scaleY: 0.3, ease: 'none',
       onUpdate: function() {
-        const progress = this.progress();
-        if (material.uniforms) {
-          material.uniforms.uNoiseFreq.value = 1.8 + progress * 6;
-          material.uniforms.uNoiseAmp.value = 0.22 + progress * 0.5;
-        }
+        scrollProgress = this.progress();
       }
     });
 
