@@ -32,7 +32,7 @@
   --nav-border:  rgba(0, 0, 0, 0.05);
 }
 
-html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; overflow-x: hidden; }
 
 body {
   background: var(--bg);
@@ -340,6 +340,34 @@ nav {
   margin-top: auto;
 }
 .pc-cta:hover { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+
+.pc-price {
+  font-size: 2.4rem; font-weight: 800;
+  color: var(--ink); margin: 0.5rem 0 1rem 0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.pc-price span {
+  font-size: 0.9rem; font-weight: 400; color: var(--mute);
+}
+.pc-delivery {
+  font-size: 0.72rem; font-weight: 700; color: var(--accent);
+  letter-spacing: 0.08em; margin-bottom: 1.5rem;
+  text-transform: uppercase;
+}
+.pc-features {
+  list-style: none; margin: 1.5rem 0; padding: 0;
+  display: flex; flex-direction: column; gap: 0.75rem;
+  border-top: 1px solid var(--rule); padding-top: 1.5rem;
+  margin-bottom: 2.5rem;
+  text-align: left;
+}
+.pc-features li {
+  font-size: 0.82rem; color: var(--ink-2);
+  display: flex; align-items: center; gap: 0.6rem;
+}
+.pc-features li::before {
+  content: '✓'; color: var(--accent); font-weight: bold;
+}
 
 /* ═══════════════════════════════════════
    OFF-RAMP / DISQUALIFICATION

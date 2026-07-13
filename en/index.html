@@ -158,11 +158,11 @@
 
     // THREE.JS — LIQUID METAL BLOB
     const canvas = document.getElementById('hero-canvas');
-    const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
-    renderer.setPixelRatio(window.innerWidth < 768 ? 1 : Math.min(window.devicePixelRatio, 2));
+    const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: window.innerWidth > 768 });
+    renderer.setPixelRatio(window.innerWidth < 768 ? 1 : Math.min(window.devicePixelRatio, 1.5));
     
     const scene = new THREE.Scene();
-    const camera = new THREE.PerspectiveCamera(45, 1, 0.1, 100);
+    const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 100);
     camera.position.z = 4;
 
     const dirLight = new THREE.DirectionalLight(0xffffff, 2.0);
@@ -325,7 +325,12 @@
       }
     `;
 
-    const geometry = new THREE.TorusKnotGeometry(0.32, 0.09, 200, 32, 2, 3);
+    // Mobil cihazlarda performansı artırmak için geometriyi (segment sayısını) ciddi oranda düşürüyoruz.
+    const isMobile = window.innerWidth < 768;
+    const tubularSegments = isMobile ? 80 : 150;
+    const radialSegments = isMobile ? 16 : 24;
+    
+    const geometry = new THREE.TorusKnotGeometry(0.32, 0.09, tubularSegments, radialSegments, 2, 3);
     const material = new THREE.ShaderMaterial({
       vertexShader,
       fragmentShader,
@@ -392,9 +397,9 @@
       camera.aspect = wrap.clientWidth / wrap.clientHeight;
       camera.updateProjectionMatrix();
       
-      // Scale down the mesh slightly on narrow mobile screens to prevent overflow
+      // Scale up the mesh slightly on mobile screens to make it prominent
       if (window.innerWidth < 600) {
-        blob.scale.set(0.72, 0.72, 0.72);
+        blob.scale.set(1.4, 1.4, 1.4);
       } else {
         blob.scale.set(1.0, 1.0, 1.0);
       }
