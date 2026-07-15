@@ -65,4 +65,16 @@ window.addEventListener('DOMContentLoaded', () => {
       item.classList.toggle('active');
     });
   });
+
+  // 6. Form Input Sanitization (XSS Prevention)
+  const contactForm = document.querySelector('.contact-form');
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      const textInputs = contactForm.querySelectorAll('input[type="text"], input[type="email"], textarea');
+      textInputs.forEach(input => {
+        // Strip potential script injections and HTML tags
+        input.value = input.value.replace(/<[^>]*>/g, '').trim();
+      });
+    });
+  }
 });

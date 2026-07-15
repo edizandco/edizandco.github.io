@@ -6,6 +6,7 @@
     const savedTheme = localStorage.getItem('theme') || 'dark';
     document.documentElement.setAttribute('data-theme', savedTheme);
   </script>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https://edizandco.com; connect-src 'self' https://formsubmit.co; frame-src 'self' https://www.google.com;" />
 
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -34,7 +35,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/style.css?v=1.0.13" />
+  <link rel="stylesheet" href="/style.css?v=1.0.14" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -457,6 +458,6 @@
 
 
 
-<script src="/main.js?v=1.0.13"></script>
+<script src="/main.js?v=1.0.14"></script>
 </body>
 </html>
