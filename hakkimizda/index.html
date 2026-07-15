@@ -34,7 +34,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/style.css?v=1.0.12" />
+  <link rel="stylesheet" href="/style.css?v=1.0.13" />
 </head>
 <body>
 <!-- NAV -->
@@ -102,51 +102,10 @@
 
   <!-- GSAP -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script>
-    window.addEventListener('DOMContentLoaded', () => {
-      gsap.to('#main-nav', { y: 0, duration: 0.4, ease: 'power3.out' });
-    });
-  </script>
-  <script>
-    // Theme Toggle Handler
-    window.addEventListener('DOMContentLoaded', () => {
-      const toggleBtn = document.getElementById('theme-toggle');
-      if (toggleBtn) {
-        toggleBtn.addEventListener('click', () => {
-          const currentTheme = document.documentElement.getAttribute('data-theme') || 'dark';
-          const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-          document.documentElement.setAttribute('data-theme', newTheme);
-          localStorage.setItem('theme', newTheme);
-          
-          // Dispatch custom event for WebGL canvas reaction
-          window.dispatchEvent(new CustomEvent('themechanged', { detail: { theme: newTheme } }));
-        });
-      }
-    });
-  </script>
 
-  <script>
-    // Mobile Menu Toggle
-    window.addEventListener('DOMContentLoaded', () => {
-      const mobileToggle = document.getElementById('mobile-toggle');
-      const mobileOverlay = document.getElementById('mobile-menu-overlay');
-      
-      if (mobileToggle && mobileOverlay) {
-        mobileToggle.addEventListener('click', () => {
-          mobileToggle.classList.toggle('active');
-          mobileOverlay.classList.toggle('active');
-        });
-        
-        // Close menu when clicking links
-        const mobileLinks = mobileOverlay.querySelectorAll('a');
-        mobileLinks.forEach(link => {
-          link.addEventListener('click', () => {
-            mobileToggle.classList.remove('active');
-            mobileOverlay.classList.remove('active');
-          });
-        });
-      }
-    });
-  </script>
+
+
+
+<script src="/main.js?v=1.0.13"></script>
 </body>
 </html>
