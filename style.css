@@ -79,15 +79,8 @@ nav {
   transition: color 0.25s;
   position: relative;
 }
-.nav-mid a::after {
-  content: ''; position: absolute; bottom: -4px; left: 0;
-  width: 0; height: 1px; background: var(--accent);
-  transition: width 0.3s ease;
-}
 .nav-mid a.active { color: var(--ink); }
-.nav-mid a.active::after { width: 100%; }
 .nav-mid a:hover { color: var(--ink); }
-.nav-mid a:hover::after { width: 100%; }
 
 .nav-cta {
   font-size: 0.62rem; font-weight: 700;
