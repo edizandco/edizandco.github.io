@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Flair Coffee Nilüfer | Gurme Kahve & Taze Tatlılar</title>
+  <meta name="description" content="Bursa Nilüfer'de (Sur Yapı Marka AVM yanı) taze kavrulmuş gurme kahveler, San Sebastian Cheesecake ve huzurlu çalışma ortamı.">
+  
+  <!-- Google Fonts: Outfit (modern, geometric) & Playfair Display (premium serif) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css?v=1.0.0">
+</head>
+<body>
+
+  <!-- HERO SECTION -->
+  <section class="hero-sec">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="brand-badge">Flair Coffee • Nilüfer</div>
+      <h1 class="hero-title">Günün Yorgunluğunu <em>Harika Bir Kahveyle</em> Geride Bırakın</h1>
+      <p class="hero-desc">Bursa Sur Yapı Marka AVM bölgesinin hemen yanı başında, özenle seçilmiş %100 Arabica çekirdekleri ve günlük hazırlanan taze tatlılarımızla gurme bir mola verin.</p>
+      
+      <div class="hero-actions">
+        <a href="https://maps.google.com/?q=40.206762,28.990709" class="btn btn-primary" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"/><circle cx="12" cy="10" r="3"/></svg>
+          Yol Tarifi Al
+        </a>
+        <a href="https://wa.me/905000000000?text=Merhaba,%20sitenizden%20ulaşıyorum.%20Bugün%20açık%20mısınız?" class="btn btn-secondary" target="_blank" rel="noopener">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          WhatsApp'tan Sor
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- KEY POINTS (Hızlı Karar Parametreleri) -->
+  <section class="points-sec">
+    <div class="points-grid">
+      <div class="point-card">
+        <div class="point-icon">☕</div>
+        <h3>Taze Kavrulmuş</h3>
+        <p>Haftalık kavrulan %100 nitelikli Arabica çekirdekleri.</p>
+      </div>
+      <div class="point-card">
+        <div class="point-icon">🍰</div>
+        <h3>Günlük Tatlılar</h3>
+        <p>Belçika çikolatalı San Sebastian ve ev yapımı lezzetler.</p>
+      </div>
+      <div class="point-card">
+        <div class="point-icon">🌿</div>
+        <h3>Huzurlu Köşe</h3>
+        <p>İster verimli bir çalışma saati, ister dostça sohbetler.</p>
+      </div>
+      <div class="point-card">
+        <div class="point-icon">📍</div>
+        <h3>Kolay Erişim</h3>
+        <p>Nilüfer Konak Mahallesinde, otopark sorunu olmayan konum.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU SECTION (Öne Çıkanlar) -->
+  <section class="menu-sec">
+    <div class="sec-header">
+      <span class="sec-label">Lezzetlerimiz</span>
+      <h2 class="sec-title">En Çok Tercih Edilen <em>Flair Klasikleri</em></h2>
+      <p class="sec-desc">Karar vermenizi kolaylaştırmak için misafirlerimizin en sevdiği gurme tatları derledik.</p>
+    </div>
+
+    <!-- Category Tabs -->
+    <div class="menu-tabs">
+      <button class="tab-btn active" onclick="switchCategory('coffees')">Kahveler</button>
+      <button class="tab-btn" onclick="switchCategory('desserts')">Tatlılar & Diğer</button>
+    </div>
+
+    <!-- Coffees Grid -->
+    <div id="coffees" class="menu-grid active">
+      <div class="menu-item">
+        <div class="menu-item-info">
+          <h3>Cold Brew</h3>
+          <p>16 saat boyunca damla damla soğuk demlenmiş, yumuşak ve pürüzsüz içimli gurme kahve.</p>
+          <span class="price">150 ₺</span>
+        </div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-info">
+          <h3>Iced Latte</h3>
+          <p>Taze espresso shot, soğuk süt ve bol buzun mükemmel ferahlatıcı uyumu.</p>
+          <span class="price">160 ₺</span>
+        </div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-info">
+          <h3>Flat White</h3>
+          <p>Çift shot espresso ve mikro köpüklü sütün yoğun ve kadifemsi birleşimi.</p>
+          <span class="price">145 ₺</span>
+        </div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-info">
+          <h3>Filtre Kahve</h3>
+          <p>Günün seçkin tek kökenli çekirdeklerinden taze demlenmiş klasik lezzet.</p>
+          <span class="price">120 ₺</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Desserts Grid -->
+    <div id="desserts" class="menu-grid">
+      <div class="menu-item">
+        <div class="menu-item-info">
+          <h3>San Sebastian Cheesecake</h3>
+          <p>İçi akışkan, mükemmel kıvamlı ve sıcak Belçika çikolatası eşliğinde servis edilir.</p>
+          <span class="price">230 ₺</span>
+        </div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-info">
+          <h3>Strawberry Magnolia</h3>
+          <p>Ev yapımı hafif krema, taze çilekler ve bisküvi parçacıklarının eşsiz dengesi.</p>
+          <span class="price">150 ₺</span>
+        </div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-info">
+          <h3>Tiramisu</h3>
+          <p>Orijinal İtalyan reçetesiyle hazırlanmış, kahve aromalı ve mascarpone kremalı klasik.</p>
+          <span class="price">150 ₺</span>
+        </div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-info">
+          <h3>Ev Yapımı Limonata</h3>
+          <p>Gerçek limon ve taze nane yapraklarıyla hazırlanan katkısız serinlik.</p>
+          <span class="price">120 ₺</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AMBIANCE / VISUAL GALLERY -->
+  <section class="gallery-sec">
+    <div class="sec-header">
+      <span class="sec-label">Ambiyans</span>
+      <h2 class="sec-title">Kahve Kokan <em>Köşelerimiz</em></h2>
+    </div>
+    <div class="gallery-grid">
+      <div class="gallery-item-large" style="background-image: url('images/hero-bg.jpg');">
+        <div class="gallery-item-overlay">
+          <span>Çalışma & Sosyalleşme Alanı</span>
+        </div>
+      </div>
+      <div class="gallery-sub-grid">
+        <div class="gallery-item" style="background-color: #1e1b18;">
+          <div class="gallery-item-content">
+            <span class="emoji">☕</span>
+            <h4>Barista Sanatı</h4>
+            <p>Her fincanda tutku ve hassasiyet.</p>
+          </div>
+        </div>
+        <div class="gallery-item" style="background-color: #24201c;">
+          <div class="gallery-item-content">
+            <span class="emoji">🍰</span>
+            <h4>Taze Fırından</h4>
+            <p>Her sabah tezgahımızda yerini alan taze lezzetler.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL PROOF (Müşteri Deneyimleri) -->
+  <section class="reviews-sec">
+    <div class="sec-header">
+      <span class="sec-label">Yorumlar</span>
+      <h2 class="sec-title">Misafirlerimiz <em>Ne Diyor?</em></h2>
+    </div>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-rating">★★★★★</div>
+        <p>"Cold Brew ve San Sebastian kombinasyonu inanılmaz. Nilüfer'de gürültüden uzak, sakin kafa çalışmak için en favori mekanım."</p>
+        <span class="review-author">Mert K. • Google Yerel Rehber</span>
+      </div>
+      <div class="review-card">
+        <div class="review-rating">★★★★★</div>
+        <p>"Kahvelerinin kalitesi gerçekten çok yüksek. Baristalar ilgili ve ortamın ambiyansı çok şık. Yolunuz düşerse mutlaka uğrayın."</p>
+        <span class="review-author">Buse T. • Instagram Misafiri</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATION / CONTACT SECTION (Kritik Dönüşüm Alnı) -->
+  <section class="location-sec">
+    <div class="location-container">
+      <div class="location-info">
+        <span class="sec-label">Konum & Ulaşım</span>
+        <h2>Bize Çok <em>Kolay Ulaşın</em></h2>
+        <p class="address-text"><strong>Adres:</strong> Konak Mahallesi, 1. Akçay Sokak, No: 5B, Nilüfer / Bursa</p>
+        <p class="location-desc">Odunluk bölgesinde, Sur Yapı Marka AVM ve metro durağının hemen yakınındayız. Araçla gelen misafirlerimiz için sokak üzerinde kolayca otopark imkanı mevcuttur.</p>
+        
+        <div class="location-actions">
+          <a href="https://maps.google.com/?q=40.206762,28.990709" class="btn btn-primary btn-pulse" target="_blank" rel="noopener">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+            Navigasyonu Başlat
+          </a>
+        </div>
+      </div>
+      
+      <div class="location-map">
+        <!-- Google Maps Iframe for Coordinates 40.206762, 28.990709 -->
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3047.889345759714!2d28.98813407659616!3d40.20676207143245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDDCsDEyJzI0LjMiTiAyOMKwNTknMTcuMyJF!5e0!3m2!1str!2str!4v1700000000000!5m2!1str!2str" 
+          width="100%" 
+          height="100%" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL BANNER -->
+  <section class="cta-banner">
+    <h2>Bugün Kendinize Bir <em>Flair Kahvesi</em> Ismarlayın</h2>
+    <p>Akçay Sokak'ta sizin için taze kahvemiz ve yerimiz hazır.</p>
+    <a href="https://maps.google.com/?q=40.206762,28.990709" class="btn btn-solid" target="_blank" rel="noopener">Yola Çık</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">Flair Coffee</div>
+      <p class="footer-copy">&copy; 2026 Flair Coffee. Tüm hakları saklıdır. Bu site Ediz & Co. tarafından tasarlanmış bir prototiptir.</p>
+    </div>
+  </footer>
+
+  <!-- MOBILE FLOATING NAVIGATION BAR (Dokunma Oranı En Yüksek Dönüşüm Alanı) -->
+  <div class="floating-bar">
+    <a href="https://maps.google.com/?q=40.206762,28.990709" class="floating-btn fb-map" target="_blank" rel="noopener">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="3 11 22 2 13 21 11 13 3 11"/></svg>
+      Navigasyon
+    </a>
+    <a href="https://wa.me/905000000000?text=Merhaba,%20sitenizden%20ulaşıyorum.%20Bugün%20açık%20mısınız?" class="floating-btn fb-whatsapp" target="_blank" rel="noopener">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+      WhatsApp
+    </a>
+  </div>
+
+  <script>
+    function switchCategory(catId) {
+      // Hide all grids
+      document.querySelectorAll('.menu-grid').forEach(grid => {
+        grid.classList.remove('active');
+      });
+      // Deactivate all buttons
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      
+      // Show targeted grid
+      document.getElementById(catId).classList.add('active');
+      // Activate clicked button
+      event.currentTarget.classList.add('active');
+    }
+  </script>
+
+</body>
+</html>
