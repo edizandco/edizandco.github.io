@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary Meta Tags -->
+  <title>Güleç Home Cafe Patisserie | Bursa Nilüfer Nitelikli Kahve & Pastane</title>
+  <meta name="title" content="Güleç Home Cafe Patisserie | Bursa Nilüfer Nitelikli Kahve & Pastane">
+  <meta name="description" content="Bursa Nilüfer Odunluk'ta taze kavrulmuş nitelikli kahve, fırından yeni çıkmış çıtır kruvasanlar ve el yapımı özel tatlılar. Ev sıcaklığında premium bir deneyim.">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://edizandco.com/demo/gulechome/">
+  <meta property="og:title" content="Güleç Home Cafe Patisserie | Bursa Nilüfer Nitelikli Kahve & Pastane">
+  <meta property="og:description" content="Nitelikli kahve, artizan kruvasanlar ve ev konforunda modern bir atmosfer. Yol tarifi alın ve bizi ziyaret edin.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1200&h=630&q=80">
+
+  <!-- FontAwesome for Premium Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Local SEO Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CafeOrCoffeeShop",
+    "name": "Güleç Home Cafe Patisserie",
+    "image": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=800&q=80",
+    "@id": "https://edizandco.com/demo/gulechome/#cafe",
+    "url": "https://edizandco.com/demo/gulechome/",
+    "telephone": "+905541953836",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Odunluk Mahallesi, Tecer Sokak, No: 2B",
+      "addressLocality": "Nilüfer",
+      "addressRegion": "Bursa",
+      "postalCode": "16110",
+      "addressCountry": "TR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 40.2078,
+      "longitude": 28.9984
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+        "Sunday"
+      ],
+      "opens": "08:00",
+      "closes": "22:00"
+    },
+    "sameAs": [
+      "https://www.instagram.com/gulechomecafe/"
+    ]
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    <i class="fa-solid fa-cookie-bite"></i> HAFTANIN HER GÜNÜ TAZE FIRINDAN: SAAT 08:00 - 22:00 ARASI HİZMETİNİZDEYİZ
+  </div>
+
+  <!-- Header -->
+  <header class="main-header" id="home">
+    <div class="container nav-container">
+      <div class="logo">
+        <a href="#home">
+          GÜLEÇ <span>HOME</span>
+        </a>
+      </div>
+      
+      <nav class="nav-menu" id="navMenu">
+        <ul>
+          <li><a href="#home">Ana Sayfa</a></li>
+          <li><a href="#sellers">Öne Çıkanlar</a></li>
+          <li><a href="#menu">Kahve & Tatlı</a></li>
+          <li><a href="#atmosphere">Atmosfer</a></li>
+          <li><a href="#gallery">Galeri</a></li>
+          <li><a href="#contact">Ulaşım</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-cta">
+        <a href="tel:+905541953836" class="btn btn-secondary">
+          <i class="fa-solid fa-phone"></i> Bizi Ara
+        </a>
+        <a href="https://maps.google.com/?q=Güleç+Home+Cafe+Patisserie+Nilüfer+Bursa" target="_blank" rel="noopener" class="btn btn-primary">
+          Yol Tarifi Al
+        </a>
+      </div>
+
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Menüyü Aç">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Nav Drawer -->
+    <div class="mobile-nav" id="mobileNav">
+      <ul>
+        <li><a href="#home" onclick="toggleMenu()">Ana Sayfa</a></li>
+        <li><a href="#sellers" onclick="toggleMenu()">Öne Çıkanlar</a></li>
+        <li><a href="#menu" onclick="toggleMenu()">Kahve & Tatlı</a></li>
+        <li><a href="#atmosphere" onclick="toggleMenu()">Atmosfer</a></li>
+        <li><a href="#gallery" onclick="toggleMenu()">Galeri</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Ulaşım</a></li>
+      </ul>
+      <div class="mobile-ctas">
+        <a href="tel:+905541953836" class="btn btn-secondary" onclick="toggleMenu()">
+          <i class="fa-solid fa-phone"></i> Bizi Ara
+        </a>
+        <a href="https://maps.google.com/?q=Güleç+Home+Cafe+Patisserie+Nilüfer+Bursa" target="_blank" rel="noopener" class="btn btn-primary" onclick="toggleMenu()">
+          <i class="fa-solid fa-location-dot"></i> Yol Tarifi Al
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="badge-location">
+          <i class="fa-solid fa-location-dot"></i> Nilüfer, Odunluk (Metroya 3 Dk.)
+        </div>
+        <h1>Güleç Home <span>Cafe & Patisserie</span></h1>
+        <p>Evinizdeki konforu nitelikli kahve barıyla buluşturduk. Odunluk Tecer Sokak'taki sakin sığınağımızda, kendi mutfağımızda mayaladığımız taze artizan kruvasanlar ve el yapımı reçetelerimizle sizi bekliyoruz.</p>
+        <div class="hero-actions">
+          <a href="https://maps.google.com/?q=Güleç+Home+Cafe+Patisserie+Nilüfer+Bursa" target="_blank" rel="noopener" class="btn btn-primary">
+            <i class="fa-solid fa-compass"></i> Yol Tarifi Al
+          </a>
+          <a href="tel:+905541953836" class="btn btn-secondary">
+            <i class="fa-solid fa-phone"></i> Bizi Ara
+          </a>
+        </div>
+        <div class="hero-info-grid">
+          <div class="info-item">
+            <i class="fa-regular fa-clock"></i>
+            <div>
+              <h4>Çalışma Saatleri</h4>
+              <p>Hafta içi & Sonu: 08:00 - 22:00</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <i class="fa-solid fa-mug-saucer"></i>
+            <div>
+              <h4>Nitelikli Çekirdekler</h4>
+              <p>%100 Arabica Single-Origin</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-image-container">
+        <!-- Premium warm cafe image representing the brand mood -->
+        <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=800&q=80" alt="Güleç Home Cafe Sıcak Atmosfer" loading="eager">
+        <div class="floating-badge">
+          <i class="fa-solid fa-cookie"></i>
+          <div>
+            <h5>Fırından Yeni Çıktı</h5>
+            <p>Her sabah 08:30'da taze artizan kruvasanlarımız fırından çıkar.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Best Sellers -->
+  <section class="best-sellers-section section-padding" id="sellers">
+    <div class="container">
+      <div class="section-header">
+        <span>Göz Alıcı Lezzetler</span>
+        <h2>En Çok Tercih Edilenler</h2>
+        <p>Ziyaretçilerimizin vazgeçemediği, Güleç Home mutfağına özel imza tatlar ve narin kahve eşleşmeleri.</p>
+      </div>
+      
+      <div class="sellers-grid">
+        <!-- Item 1 -->
+        <article class="seller-card">
+          <div class="seller-img">
+            <span class="seller-badge">Fırından</span>
+            <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=600&q=80" alt="Artizan Kruvasan" loading="lazy">
+          </div>
+          <div class="seller-info">
+            <div class="seller-title-row">
+              <h3>Artizan Kruvasan</h3>
+              <span class="seller-price">95 TL</span>
+            </div>
+            <p>Fransız tereyağı ile 24 saat soğuk mayalandırma süreciyle elde edilen, dışı çıtır içi yumuşacık katmanlar.</p>
+            <div class="seller-footer">
+              <i class="fa-solid fa-star"></i>
+              <span>Her sabah taze pişirilir.</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 2 -->
+        <article class="seller-card">
+          <div class="seller-img">
+            <span class="seller-badge">İmza Tatlı</span>
+            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80" alt="San Sebastian Cheesecake" loading="lazy">
+          </div>
+          <div class="seller-info">
+            <div class="seller-title-row">
+              <h3>San Sebastian</h3>
+              <span class="seller-price">140 TL</span>
+            </div>
+            <p>Akışkan iç dokusu, hafifçe karamelize olmuş üst katmanı ve birinci sınıf krema peyniri ile Güleç klasiği.</p>
+            <div class="seller-footer">
+              <i class="fa-solid fa-star"></i>
+              <span>Katkısız ve el yapımı.</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 3 -->
+        <article class="seller-card">
+          <div class="seller-img">
+            <span class="seller-badge">Barista Seçimi</span>
+            <img src="https://images.unsplash.com/photo-1577968897966-3d4325b36b61?auto=format&fit=crop&w=600&q=80" alt="Flat White" loading="lazy">
+          </div>
+          <div class="seller-info">
+            <div class="seller-title-row">
+              <h3>Flat White</h3>
+              <span class="seller-price">95 TL</span>
+            </div>
+            <p>Özenle kavrulmuş Etiyopya çekirdeklerinden double shot espresso ve pürüzsüz mikro kadife süt köpüğü.</p>
+            <div class="seller-footer">
+              <i class="fa-solid fa-mug-hot"></i>
+              <span>Nitelikli Arabica çekirdekleri.</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Coffee & Desserts Menu -->
+  <section class="menu-section section-padding" id="menu">
+    <div class="container">
+      <div class="section-header">
+        <span>Menümüz</span>
+        <h2>Kahve & Tatlı Seçkisi</h2>
+        <p>Sadece en taze malzemeleri ve yüksek kalitedeki malzemeleri seçerek hazırladığımız sade ama kusursuz menümüz.</p>
+      </div>
+
+      <div class="menu-grid">
+        <!-- Coffee Column -->
+        <div class="menu-column">
+          <div class="menu-column-header">
+            <i class="fa-solid fa-mug-hot"></i>
+            <h3>Nitelikli Kahveler</h3>
+          </div>
+          <div class="menu-list">
+            <!-- Item 1 -->
+            <div class="menu-item">
+              <div class="menu-item-row">
+                <span class="menu-item-name">Double Espresso</span>
+                <span class="menu-item-dot"></span>
+                <span class="menu-item-price">70 TL</span>
+              </div>
+              <p class="menu-item-desc">%100 Arabica, dengeli asidite ve yoğun gövde</p>
+            </div>
+            <!-- Item 2 -->
+            <div class="menu-item">
+              <div class="menu-item-row">
+                <span class="menu-item-name">Americano</span>
+                <span class="menu-item-dot"></span>
+                <span class="menu-item-price">80 TL</span>
+              </div>
+              <p class="menu-item-desc">Double shot espresso ve sıcak suyun uyumu</p>
+            </div>
+            <!-- Item 3 -->
+            <div class="menu-item">
+              <div class="menu-item-row">
+                <span class="menu-item-name">Caffè Latte</span>
+                <span class="menu-item-dot"></span>
+                <span class="menu-item-price">90 TL</span>
+              </div>
+              <p class="menu-item-desc">Yumuşak içimli sütlü kahve klasiği</p>
+            </div>
+            <!-- Item 4 -->
+            <div class="menu-item">
+              <div class="menu-item-row">
+                <span class="menu-item-name">Flat White</span>
+                <span class="menu-item-dot"></span>
+                <span class="menu-item-price">95 TL</span>
+              </div>
+              <p class="menu-item-desc">Double shot espresso ve kadife dokulu ince köpük</p>
+            </div>
+            <!-- Item 5 -->
+            <div class="menu-item">
+              <div class="menu-item-row">
+                <span class="menu-item-name">V60 Drip Brew</span>
+                <span class="menu-item-dot"></span>
+                <span class="menu-item-price">110 TL</span>
+              </div>
+              <p class="menu-item-desc">Haftalık değişen single-origin çekirdeklerle demlenmiş berrak tatlar</p>
+              <div class="menu-item-badges">
+                <span class="menu-badge menu-badge-special">Haftalık Özel</span>
+              </div>
+            </div>
+            <!-- Item 6 -->
+            <div class="menu-item">
+              <div class="menu-item-row">
+                <span class="menu-item-name">Cold Brew</span>
+                <span class="menu-item-dot"></span>
+                <span class="menu-item-price">95 TL</span>
+              </div>
+              <p class="menu-item-desc">16 saat soğuk damıtılmış pürüzsüz ve ferahlatıcı lezzet</p>
+            </div>
+            <!-- Item 7 -->
+            <div class="menu-item">
+              <div class="menu-item-row">
+                <span class="menu-item-name">Geleneksel Türk Kahvesi</span>
+                <span class="menu-item-dot"></span>
+                <span class="menu-item-price">65 TL</span>
+              </div>
+              <p class="menu-item-desc">Çifte kavrulmuş taze çekilmiş çekirdeklerden su ve lokum ikramıyla</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bakery Column -->
+        <div class="menu-column">
+          <div class="menu-column-header">
+            <i class="fa-solid fa-cake-candles"></i>
+            <h3>Fırından & Tatlılar</h3>
+          </div>
+          <div class="menu-list">
+            <!-- Item 1 -->
+            <div class="menu-item">
+              <div class="menu-item-row">
+                <span class="menu-item-name">Artizan Sade Kruvasan</span>
+                <span class="menu-item-dot"></span>
+                <span class="menu-item-price">95 TL</span>
+              </div>
+              <p class="menu-item-desc">Saf tereyağlı, çıtır katmanlı geleneksel fırın lezzeti</p>
+            </div>
+            <!-- Item 2 -->
+            <div class="menu-item">
+              <div class="menu-item-row">
+                <span class="menu-item-name">Çilekli Milföy Tart</span>
+                <span class="menu-item-dot"></span>
+                <span class="menu-item-price">125 TL</span>
+              </div>
+              <p class="menu-item-desc">Ev yapımı pastacı kreması, taze çilekler ve çıtır milföy hamuru</p>
+            </div>
+            <!-- Item 3 -->
+            <div class="menu-item">
+              <div class="menu-item-row">
+                <span class="menu-item-name">San Sebastian Cheesecake</span>
+                <span class="menu-item-dot"></span>
+                <span class="menu-item-price">140 TL</span>
+              </div>
+              <p class="menu-item-desc">İspanyol usulü akışkan cheesecake (İsteğe göre eritilmiş Belçika çikolatasıyla +25 TL)</p>
+            </div>
+            <!-- Item 4 -->
+            <div class="menu-item">
+              <div class="menu-item-row">
+                <span class="menu-item-name">Havuçlu Tarçınlı Ev Keki</span>
+                <span class="menu-item-dot"></span>
+                <span class="menu-item-price">80 TL</span>
+              </div>
+              <p class="menu-item-desc">Bol cevizli, tarçınlı ve zencefilli anne usulü yumuşacık kek dilimi</p>
+            </div>
+            <!-- Item 5 -->
+            <div class="menu-item">
+              <div class="menu-item-row">
+                <span class="menu-item-name">Lotus & Brownie</span>
+                <span class="menu-item-dot"></span>
+                <span class="menu-item-price">110 TL</span>
+              </div>
+              <p class="menu-item-desc">Belçika çikolatalı ıslak brownie tabanında nefis Lotus krema dokunuşu</p>
+            </div>
+            <!-- Item 6 -->
+            <div class="menu-item">
+              <div class="menu-item-row">
+                <span class="menu-item-name">Ekşi Mayalı Ekmek Üstü Avokado</span>
+                <span class="menu-item-dot"></span>
+                <span class="menu-item-price">160 TL</span>
+              </div>
+              <p class="menu-item-desc">Kendi pişirdiğimiz ekşi mayalı ekmek diliminde poşe yumurta, ezilmiş avokado ve mikro yeşillikler</p>
+              <div class="menu-item-badges">
+                <span class="menu-badge menu-badge-special">Sağlıklı Seçim</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <p class="menu-disclaimer">
+        * Kalitemizi korumak adına tüm ürünlerimizi günlük olarak sınırlı miktarda hazırlıyoruz. Gün sonuna doğru bazı ürünler tükenebilmektedir. Anlayışınız için teşekkür ederiz.
+      </p>
+    </div>
+  </section>
+
+  <!-- Atmosphere -->
+  <section class="atmosphere-section section-padding" id="atmosphere">
+    <div class="container atmos-grid">
+      <div class="atmos-images">
+        <div class="atmos-img-box atmos-img-tall">
+          <img src="https://images.unsplash.com/photo-1521017432531-fbd92d768814?auto=format&fit=crop&w=600&q=80" alt="Güleç Home Bahçe Detayı" loading="lazy">
+        </div>
+        <div class="atmos-img-box">
+          <img src="https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&w=600&q=80" alt="Nitelikli Kahve Yapımı" loading="lazy">
+        </div>
+        <div class="atmos-img-box">
+          <img src="https://images.unsplash.com/photo-1481833761820-0509d3217039?auto=format&fit=crop&w=600&q=80" alt="Güleç Home İç Mekan Çalışma Köşesi" loading="lazy">
+        </div>
+      </div>
+      
+      <div class="atmos-content">
+        <span>Neden 'Home'?</span>
+        <h2>Tecer Sokak'ta Bir Sığınak</h2>
+        <p>Bursa Nilüfer'in karmaşasından uzakta, Odunluk Metro İstasyonu'nun hemen yanı başında ama bir o kadar sakin bir sokakta konumlandık. Biz burayı sadece bir kafe olarak değil, sizin için ikinci bir ev ('Home') olarak tasarladık.</p>
+        <p>Burası sabahları taze kahve kokusu eşliğinde odaklanarak çalışabileceğiniz, öğleden sonraları ise fırından çıkan sıcak kokularla huzurlu bir mola verebileceğiniz sakin bir durak.</p>
+        
+        <div class="atmos-points">
+          <div class="atmos-point">
+            <i class="fa-solid fa-wifi"></i>
+            <div>
+              <h4>Yüksek Hızlı İnternet & Çalışma Alanları</h4>
+              <p>Her masaya yakın prizler ve kesintisiz fiber altyapısı ile uzaktan çalışanlar için ideal ortam.</p>
+            </div>
+          </div>
+          
+          <div class="atmos-point">
+            <i class="fa-solid fa-seedling"></i>
+            <div>
+              <h4>Sessiz Arka Bahçe</h4>
+              <p>Yeşillikler içinde, gürültüden arındırılmış, kitap okumak veya dinlenmek için tasarlanmış özel alan.</p>
+            </div>
+          </div>
+          
+          <div class="atmos-point">
+            <i class="fa-solid fa-heart"></i>
+            <div>
+              <h4>Ev Yapımı Doğallık</h4>
+              <p>Endüstriyel hiçbir malzeme kullanmadan, tıpkı evinizdeki gibi katkısız, narin ve dürüst mutfak.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section class="gallery-section section-padding" id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <span>Vizörümüzden</span>
+        <h2>Güleç Home Kareleri</h2>
+        <p>Mutfağımızdan, kahve barımızdan ve sıcak köşelerimizden en taze anlar.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <!-- Item 1 - Wide -->
+        <div class="gallery-item gallery-wide">
+          <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=800&q=80" alt="Demlenen Nitelikli Kahve V60" loading="lazy">
+          <div class="gallery-overlay">
+            <i class="fa-brands fa-instagram"></i>
+          </div>
+        </div>
+        <!-- Item 2 - Tall -->
+        <div class="gallery-item gallery-tall">
+          <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=80" alt="Espresso Makinesi Barista" loading="lazy">
+          <div class="gallery-overlay">
+            <i class="fa-brands fa-instagram"></i>
+          </div>
+        </div>
+        <!-- Item 3 -->
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1517433456452-f9633a875f6f?auto=format&fit=crop&w=600&q=80" alt="Taze Kruvasan Pişirme" loading="lazy">
+          <div class="gallery-overlay">
+            <i class="fa-brands fa-instagram"></i>
+          </div>
+        </div>
+        <!-- Item 4 -->
+        <div class="gallery-item">
+          <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=600&q=80" alt="Masa Detayı Kitap Kahve" loading="lazy">
+          <div class="gallery-overlay">
+            <i class="fa-brands fa-instagram"></i>
+          </div>
+        </div>
+        <!-- Item 5 - Wide -->
+        <div class="gallery-item gallery-wide">
+          <img src="https://images.unsplash.com/photo-1559925393-8be0ec4767c8?auto=format&fit=crop&w=800&q=80" alt="Cafe Genel Oturma Düzeni" loading="lazy">
+          <div class="gallery-overlay">
+            <i class="fa-brands fa-instagram"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Instagram Hub -->
+  <section class="instagram-section section-padding">
+    <div class="container">
+      <div class="section-header">
+        <span>Bizi Takip Edin</span>
+        <h2>Topluluğumuza Katılın</h2>
+        <p>Instagram'da en taze fırın duyurularını, haftalık özel çekirdekleri ve anlık gelişmeleri paylaşıyoruz.</p>
+      </div>
+
+      <div class="insta-card">
+        <!-- Insta Header Mock -->
+        <div class="insta-header">
+          <div class="insta-profile">
+            <div class="insta-avatar">
+              <i class="fa-solid fa-mug-hot"></i>
+            </div>
+            <div class="insta-profile-info">
+              <h4>gulechomecafe</h4>
+              <p>Güleç Home Cafe & Patisserie • Bursa, Nilüfer</p>
+            </div>
+          </div>
+          <div class="insta-stats">
+            <div class="insta-stat">
+              <span>284</span>
+              <label>gönderi</label>
+            </div>
+            <div class="insta-stat">
+              <span>8.4K</span>
+              <label>takipçi</label>
+            </div>
+            <div class="insta-stat">
+              <span>412</span>
+              <label>takip</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Insta Posts Mock -->
+        <div class="insta-posts-grid">
+          <!-- Post 1 -->
+          <div class="insta-post">
+            <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=400&q=80" alt="Instagram Post 1" loading="lazy">
+            <div class="insta-post-overlay">
+              <span><i class="fa-solid fa-heart"></i> 412</span>
+              <span><i class="fa-solid fa-comment"></i> 18</span>
+            </div>
+          </div>
+          <!-- Post 2 -->
+          <div class="insta-post">
+            <img src="https://images.unsplash.com/photo-1513267048331-5611cad82e4f?auto=format&fit=crop&w=400&q=80" alt="Instagram Post 2" loading="lazy">
+            <div class="insta-post-overlay">
+              <span><i class="fa-solid fa-heart"></i> 589</span>
+              <span><i class="fa-solid fa-comment"></i> 32</span>
+            </div>
+          </div>
+          <!-- Post 3 -->
+          <div class="insta-post">
+            <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=400&q=80" alt="Instagram Post 3" loading="lazy">
+            <div class="insta-post-overlay">
+              <span><i class="fa-solid fa-heart"></i> 364</span>
+              <span><i class="fa-solid fa-comment"></i> 14</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Insta Join Banner -->
+        <div class="insta-footer-btn">
+          <a href="https://www.instagram.com/gulechomecafe/" target="_blank" rel="noopener" class="btn btn-outline">
+            <i class="fa-brands fa-instagram"></i> @gulechomecafe Hesabını Takip Et
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Google Maps Section -->
+  <section class="map-section" id="contact">
+    <div class="map-container">
+      <!-- Premium Customized Google Map Embed pointing to Tecer Sokak -->
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3047.8878586826496!2d28.996163376757134!3d40.20783457143242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14ca15f11cc5cf89%3A0xc3cf33887d1953836!2sOdunluk%2C%20Tecer%20Sk.%20No%3A2%2C%2016110%20Nil%C3%BCfer%2FBursa!5e0!3m2!1str!2str!4v1721200000000!5m2!1str!2str" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Güleç Home Cafe Patisserie Harita Konumu"></iframe>
+    </div>
+    
+    <div class="map-overlay-card">
+      <h3>Bizi Ziyaret Edin</h3>
+      
+      <div class="map-info-block">
+        <h4>Açık Adres</h4>
+        <p>Odunluk Mahallesi, Tecer Sokak, No: 2B<br>Nilüfer / Bursa</p>
+      </div>
+
+      <div class="map-info-block">
+        <h4>Ulaşım Tarifi</h4>
+        <p>Odunluk Metro Durağına sadece 3 dakika yürüme mesafesinde. Sur Yapı Marka AVM'nin arka sokağında yer alıyoruz.</p>
+      </div>
+
+      <div class="map-info-block">
+        <h4>Telefon & İletişim</h4>
+        <p><a href="tel:+905541953836" style="color: var(--text-primary); text-decoration: none; font-weight: 700;">+90 554 195 38 36</a></p>
+      </div>
+
+      <a href="https://maps.google.com/?q=Güleç+Home+Cafe+Patisserie+Nilüfer+Bursa" target="_blank" rel="noopener" class="btn btn-primary">
+        <i class="fa-solid fa-location-arrow"></i> Yol Tarifi Başlat
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <h3>Güleç Home</h3>
+        <p>Bursa Nilüfer'de nitelikli kahvenin, el yapımı taze pastane lezzetlerinin ve huzurun buluştuğu sakin sığınak.</p>
+        <div class="social-links">
+          <a href="https://www.instagram.com/gulechomecafe/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://maps.google.com/?q=Güleç+Home+Cafe+Patisserie+Nilüfer+Bursa" target="_blank" rel="noopener" aria-label="Google Maps"><i class="fa-solid fa-location-dot"></i></a>
+          <a href="tel:+905541953836" aria-label="Telefon Arama"><i class="fa-solid fa-phone"></i></a>
+        </div>
+      </div>
+      
+      <div class="footer-links">
+        <h4>Navigasyon</h4>
+        <ul>
+          <li><a href="#home">Ana Sayfa</a></li>
+          <li><a href="#sellers">Öne Çıkanlar</a></li>
+          <li><a href="#menu">Kahve & Tatlı</a></li>
+          <li><a href="#atmosphere">Atmosfer</a></li>
+          <li><a href="#gallery">Galeri</a></li>
+          <li><a href="#contact">İletişim & Ulaşım</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h4>İletişim Bilgileri</h4>
+        <ul>
+          <li>
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Odunluk Mah. Tecer Sok. No: 2B Nilüfer, Bursa</span>
+          </li>
+          <li>
+            <i class="fa-solid fa-phone"></i>
+            <a href="tel:+905541953836">+90 554 195 38 36</a>
+          </li>
+          <li>
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:info@gulechomecafe.com">info@gulechomecafe.com</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Güleç Home Cafe Patisserie. Tüm Hakları Saklıdır.</p>
+      <a href="https://edizandco.com" target="_blank" class="ediz-tag">
+        Bu bir <span>Ediz & Co.</span> tasarımıdır.
+      </a>
+    </div>
+  </footer>
+
+  <!-- Floating Sticky Action Bar for Mobile Conversions -->
+  <div class="mobile-sticky-actions">
+    <a href="tel:+905541953836" class="btn btn-secondary">
+      <i class="fa-solid fa-phone"></i> Bizi Ara
+    </a>
+    <a href="https://maps.google.com/?q=Güleç+Home+Cafe+Patisserie+Nilüfer+Bursa" target="_blank" rel="noopener" class="btn btn-primary">
+      <i class="fa-solid fa-location-dot"></i> Yol Tarifi Al
+    </a>
+  </div>
+
+  <!-- Lightweight Script for Mobile Menu Toggle -->
+  <script>
+    const mobileToggle = document.getElementById('mobileToggle');
+    const mobileNav = document.getElementById('mobileNav');
+
+    mobileToggle.addEventListener('click', () => {
+      if (mobileNav.style.display === 'block') {
+        mobileNav.style.display = 'none';
+        mobileToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+      } else {
+        mobileNav.style.display = 'block';
+        mobileToggle.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+      }
+    });
+
+    function toggleMenu() {
+      mobileNav.style.display = 'none';
+      mobileToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+    }
+
+    // Close mobile nav on resize if switching to desktop widths
+    window.addEventListener('resize', () => {
+      if (window.innerWidth > 991) {
+        mobileNav.style.display = 'none';
+        mobileToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+      }
+    });
+  </script>
+
+</body>
+</html>
